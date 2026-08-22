@@ -1,15 +1,23 @@
 /* Portfolio — vanilla JS, no dependencies.
-   D1 nav toggle · D2 smooth scroll + active nav · D3 reveal · D4 print CV */
+   nav toggle · smooth scroll + active nav · reveal · print CV */
 
 (function () {
   "use strict";
 
-  // Flag JS available (gating reveal so no-JS users still see content)
   document.documentElement.classList.add("js");
 
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // ---- D1: Mobile nav toggle ----
+  // ---- Header shadow on scroll ----
+  var header = document.querySelector(".site-header");
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle("scrolled", window.scrollY > 8);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // ---- Mobile nav toggle ----
   var toggle = document.querySelector(".nav__toggle");
   var menu = document.getElementById("nav-menu");
 
@@ -20,15 +28,13 @@
       toggle.setAttribute("aria-label", open ? "Tutup menu navigasi" : "Buka menu navigasi");
     });
 
-    // Close menu on link click
     menu.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") {
+      if (e.target.closest("a")) {
         menu.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
       }
     });
 
-    // Close on Escape
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && menu.classList.contains("open")) {
         menu.classList.remove("open");
@@ -38,8 +44,7 @@
     });
   }
 
-  // ---- D2: Smooth scroll + active nav highlight ----
-  // Native CSS scroll-behavior handles the scroll; here we track active section.
+  // ---- Active nav highlight ----
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav__menu a[href^="#"]'));
   var sections = navLinks
     .map(function (a) { return document.querySelector(a.getAttribute("href")); })
@@ -57,17 +62,16 @@
           }
         });
       },
-      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
     );
     sections.forEach(function (s) { navObserver.observe(s); });
   }
 
-  // ---- D3: Scroll reveal ----
+  // ---- Scroll reveal ----
   var revealEls = document.querySelectorAll(
-    ".section, .card, .skills__group, .contact__item"
+    ".hero__panel, .section .eyebrow ~ .section__title, .card, .timeline__content, .skills__group, .contact__item, .contact-panel, .hl"
   );
 
-  // Default: mark all visible (JS-off / no IO / reduced-motion safety)
   function showAll() {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
@@ -84,26 +88,15 @@
           }
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.06, rootMargin: "0px 0px -30px 0px" }
     );
     revealEls.forEach(function (el) { el.classList.add("reveal"); revealObserver.observe(el); });
-
-    // Safety: anything not yet visible after load gets shown on first scroll
-    window.addEventListener(
-      "scroll",
-      function () {
-        // No-op guard: observer handles it; this prevents content stuck hidden if IO misbehaves
-      },
-      { passive: true, once: true }
-    );
   }
 
-  // ---- D4: Download CV → print ----
+  // ---- Download CV → print ----
   var btnCv = document.getElementById("btn-download-cv");
   if (btnCv) {
-    btnCv.addEventListener("click", function () {
-      window.print();
-    });
+    btnCv.addEventListener("click", function () { window.print(); });
   }
 
   // ---- Footer year ----
