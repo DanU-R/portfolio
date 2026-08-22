@@ -10,13 +10,16 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="og-image.jpg">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Navigasi utama">
-      <a class="nav__brand" href="#top">Danu<span class="nav__brand-dot">.</span></a>
+      <a class="nav__brand" href="#top">Danu<span class="nav__brand-dot">.dev</span></a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu navigasi">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
@@ -26,7 +29,7 @@
         <li><a href="#projects">Proyek</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Pendidikan</a></li>
-        <li><a href="#contact">Kontak</a></li>
+        <li><a class="nav__cta" href="#contact">Kontak</a></li>
       </ul>
     </nav>
   </header>
@@ -35,21 +38,39 @@
     <!-- HERO -->
     <section class="hero" aria-label="Perkenalan">
       <div class="container hero__inner">
-        <h1>Danu Ranggana</h1>
-        <p class="hero__tagline">Fresh Graduate Informatics <span aria-hidden="true">|</span> AI-Powered Problem Solver <span aria-hidden="true">|</span> Tech Enthusiast</p>
-        <p class="hero__sub">Fresh graduate S1 Teknik Informatika, IPK 3,53 (Dengan Pujian) — fokus web development &amp; AI agent.</p>
-        <p class="hero__contact" aria-hidden="true">
-          <a href="mailto:danuranggana9@gmail.com">danuranggana9@gmail.com</a>
-          <a href="tel:+6289501927317">+62 895-0192-7317</a>
-          <a href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener">linkedin.com/in/danuranggana</a>
-          <a href="https://github.com/DanU-R" target="_blank" rel="noopener">github.com/DanU-R</a>
-        </p>
-        <div class="hero__cta">
-          <button type="button" class="btn btn--primary" id="btn-download-cv">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download CV
-          </button>
-          <a class="btn btn--outline" href="#contact">Hubungi Saya</a>
+        <div class="hero__text">
+          <span class="pill">
+            <span class="pill__dot" aria-hidden="true"></span>
+            Open to work — Full-Stack &amp; Web Development
+          </span>
+          <h1>Halo, saya <span class="grad">Danu Ranggana</span></h1>
+          <p class="hero__tagline">Fresh Graduate Informatics <span class="hero__sep" aria-hidden="true">/</span> AI-Powered Problem Solver <span class="hero__sep" aria-hidden="true">/</span> Tech Enthusiast</p>
+          <p class="hero__sub">Fresh graduate S1 Teknik Informatika, IPK 3,53 (Dengan Pujian) — fokus web development &amp; AI agent.</p>
+          <div class="hero__cta">
+            <button type="button" class="btn btn--primary" id="btn-download-cv">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </button>
+            <a class="btn btn--ghost" href="#contact">
+              Hubungi Saya
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <p class="hero__contact" aria-hidden="true">
+            <a href="mailto:danuranggana9@gmail.com">danuranggana9@gmail.com</a>
+            <a href="tel:+6289501927317">+62 895-0192-7317</a>
+            <a href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener">linkedin.com/in/danuranggana</a>
+            <a href="https://github.com/DanU-R" target="_blank" rel="noopener">github.com/DanU-R</a>
+          </p>
+        </div>
+        <div class="hero__panel" aria-hidden="true">
+          <div class="hero__avatar">DR</div>
+          <div class="hero__stats">
+            <div class="stat"><span class="stat__num">3,53</span><span class="stat__label">IPK — Dengan Pujian</span></div>
+            <div class="stat"><span class="stat__num">4 bln</span><span class="stat__label">Magang BPS</span></div>
+            <div class="stat"><span class="stat__num">2</span><span class="stat__label">Sertifikasi</span></div>
+            <div class="stat"><span class="stat__num">2+</span><span class="stat__label">Proyek Web</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -57,9 +78,15 @@
     <!-- ABOUT -->
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
+        <p class="eyebrow">01 — Tentang</p>
         <h2 id="about-title" class="section__title">Tentang Saya</h2>
         <div class="about">
           <p>Fresh graduate S1 Teknik Informatika dengan IPK <strong>3,53 (Dengan Pujian)</strong>. Fondasi kuat di pengembangan web (<strong>PHP, Laravel, JavaScript</strong>) dan pengelolaan database (<strong>MySQL, PostgreSQL</strong>). Berpengalaman magang di Badan Pusat Statistik (BPS) dalam pengolahan data &amp; IT support. Teliti dan cepat belajar. Saat ini juga mendalami <strong>AI agent (Hermes)</strong> secara mandiri.</p>
+          <div class="about__highlights">
+            <div class="hl"><span class="hl__icon" aria-hidden="true">🎓</span><h3>Dengan Pujian</h3><p>IPK 3,53 — Institut Widya Pratama Pekalongan</p></div>
+            <div class="hl"><span class="hl__icon" aria-hidden="true">🔧</span><h3>IT Support BPS</h3><p>Magang Maret–Juni 2024, Kab. Pemalang</p></div>
+            <div class="hl"><span class="hl__icon" aria-hidden="true">🤖</span><h3>AI Agent</h3><p>Mendalami Hermes &amp; automasi mandiri</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -67,32 +94,42 @@
     <!-- EXPERIENCE -->
     <section class="section section--alt" id="experience" aria-labelledby="exp-title">
       <div class="container">
-        <h2 id="exp-title" class="section__title">Pengalaman</h2>
-        <article class="card experience">
-          <div class="card__head">
-            <h3 class="card__title">Magang — Pengolahan Data &amp; IT Support</h3>
-            <span class="card__period">Maret – Juni 2024</span>
-          </div>
-          <p class="card__org">Badan Pusat Statistik (BPS) Kabupaten Pemalang</p>
-          <ul class="experience__list">
-            <li>Menjaga operasional aplikasi internal (monitoring &amp; maintenance).</li>
-            <li>Troubleshooting dan testing aplikasi internal.</li>
-            <li>Verifikasi dan validasi data.</li>
-            <li>Menyusun dokumentasi teknis.</li>
-            <li>Berkoordinasi dengan tim dalam menyelesaikan tugas.</li>
-          </ul>
-        </article>
+        <p class="eyebrow">02 — Pengalaman</p>
+        <h2 id="exp-title" class="section__title">Pengalaman Kerja</h2>
+        <div class="timeline">
+          <article class="card experience timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="card__head">
+                <h3 class="card__title">Magang — Pengolahan Data &amp; IT Support</h3>
+                <span class="card__period">Maret – Juni 2024</span>
+              </div>
+              <p class="card__org">Badan Pusat Statistik (BPS) Kabupaten Pemalang</p>
+              <ul class="experience__list">
+                <li>Menjaga operasional aplikasi internal (monitoring &amp; maintenance).</li>
+                <li>Troubleshooting dan testing aplikasi internal.</li>
+                <li>Verifikasi dan validasi data.</li>
+                <li>Menyusun dokumentasi teknis.</li>
+                <li>Berkoordinasi dengan tim dalam menyelesaikan tugas.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section class="section" id="projects" aria-labelledby="proj-title">
       <div class="container">
-        <h2 id="proj-title" class="section__title">Proyek</h2>
+        <p class="eyebrow">03 — Proyek</p>
+        <h2 id="proj-title" class="section__title">Proyek Pilihan</h2>
         <div class="projects">
           <article class="card project">
-            <div class="project__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1M9 13h1M14 9h1M14 13h1"/><path d="M10 21v-4h4v4"/></svg>
+            <div class="project__top">
+              <div class="project__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1M9 13h1M14 9h1M14 13h1"/><path d="M10 21v-4h4v4"/></svg>
+              </div>
+              <span class="project__tag">Web Platform</span>
             </div>
             <h3 class="card__title">Digitalisasi Sistem Informasi Sekolah</h3>
             <p class="card__desc">Platform web profil sekolah untuk menampilkan informasi sekolah secara digital dan terpusat.</p>
@@ -101,15 +138,18 @@
               <li class="badge badge--css">Tailwind CSS</li>
               <li class="badge badge--db">MySQL</li>
             </ul>
-            <a class="btn btn--small btn--outline" href="https://github.com/DanU-R/company-profile" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-              Lihat di GitHub
+            <a class="project__link" href="https://github.com/DanU-R/company-profile" target="_blank" rel="noopener">
+              Lihat kode
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
           </article>
 
           <article class="card project">
-            <div class="project__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h8v4H8z"/><path d="M8 16h5"/><path d="M12 3v2"/></svg>
+            <div class="project__top">
+              <div class="project__icon project__icon--py" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h8v4H8z"/><path d="M8 16h5"/><path d="M12 3v2"/></svg>
+              </div>
+              <span class="project__tag">Automation</span>
             </div>
             <h3 class="card__title">Google Workspace AutoBot</h3>
             <p class="card__desc">Toolkit otomasi Python untuk pengelolaan Google Workspace Admin.</p>
@@ -117,9 +157,9 @@
               <li class="badge badge--py">Python</li>
               <li class="badge badge--py">Selenium</li>
             </ul>
-            <a class="btn btn--small btn--outline" href="https://github.com/DanU-R/gsuite_workspace" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-              Lihat di GitHub
+            <a class="project__link" href="https://github.com/DanU-R/gsuite_workspace" target="_blank" rel="noopener">
+              Lihat kode
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
           </article>
         </div>
@@ -129,17 +169,24 @@
     <!-- SKILLS -->
     <section class="section section--alt" id="skills" aria-labelledby="skills-title">
       <div class="container">
+        <p class="eyebrow">04 — Skill Set</p>
         <h2 id="skills-title" class="section__title">Skills</h2>
         <div class="skills">
           <div class="skills__group">
-            <h3>Database</h3>
+            <div class="skills__head">
+              <svg class="skills__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              <h3>Database</h3>
+            </div>
             <ul class="badges">
               <li class="badge badge--db">MySQL</li>
               <li class="badge badge--db">PostgreSQL</li>
             </ul>
           </div>
           <div class="skills__group">
-            <h3>Backend</h3>
+            <div class="skills__head">
+              <svg class="skills__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <h3>Backend</h3>
+            </div>
             <ul class="badges">
               <li class="badge badge--php">PHP</li>
               <li class="badge badge--php">Laravel</li>
@@ -147,7 +194,10 @@
             </ul>
           </div>
           <div class="skills__group">
-            <h3>Frontend</h3>
+            <div class="skills__head">
+              <svg class="skills__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <h3>Frontend</h3>
+            </div>
             <ul class="badges">
               <li class="badge badge--js">JavaScript</li>
               <li class="badge badge--html">HTML</li>
@@ -156,7 +206,10 @@
             </ul>
           </div>
           <div class="skills__group">
-            <h3>Tools</h3>
+            <div class="skills__head">
+              <svg class="skills__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <h3>Tools</h3>
+            </div>
             <ul class="badges">
               <li class="badge badge--tool">Git</li>
               <li class="badge badge--tool">Microsoft Excel</li>
@@ -171,58 +224,73 @@
     <!-- EDUCATION & CERTIFICATIONS -->
     <section class="section" id="education" aria-labelledby="edu-title">
       <div class="container">
+        <p class="eyebrow">05 — Pendidikan</p>
         <h2 id="edu-title" class="section__title">Pendidikan &amp; Sertifikasi</h2>
-        <div class="education">
-          <article class="card edu">
-            <div class="card__head">
-              <h3 class="card__title">S1 Teknik Informatika</h3>
-              <span class="card__period">2021 – 2025</span>
+        <div class="timeline">
+          <article class="card edu timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="card__head">
+                <h3 class="card__title">S1 Teknik Informatika</h3>
+                <span class="card__period">2021 – 2025</span>
+              </div>
+              <p class="card__org">Institut Widya Pratama Pekalongan</p>
+              <p class="edu__note">IPK 3,53 — <strong>Dengan Pujian</strong></p>
             </div>
-            <p class="card__org">Institut Widya Pratama Pekalongan</p>
-            <p class="edu__note">IPK 3,53 — Dengan Pujian</p>
           </article>
-          <article class="card edu">
-            <div class="card__head">
-              <h3 class="card__title">SMK TKJ</h3>
-              <span class="card__period">2019 – 2021</span>
+          <article class="card edu timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="card__head">
+                <h3 class="card__title">SMK TKJ</h3>
+                <span class="card__period">2019 – 2021</span>
+              </div>
+              <p class="card__org">SMK Texmaco Pemalang</p>
+              <p class="edu__note">Teknik Komputer &amp; Jaringan</p>
             </div>
-            <p class="card__org">SMK Texmaco Pemalang</p>
-            <p class="edu__note">Teknik Komputer &amp; Jaringan</p>
           </article>
-          <article class="card edu">
-            <div class="card__head">
-              <h3 class="card__title">Sertifikasi</h3>
-            </div>
-            <ul class="badges">
-              <li class="badge badge--cert">CCNAv7</li>
-              <li class="badge badge--cert">BNSP TKJ</li>
-            </ul>
-          </article>
+        </div>
+        <div class="certs">
+          <span class="badge badge--cert">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>
+            CCNAv7
+          </span>
+          <span class="badge badge--cert">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>
+            BNSP TKJ
+          </span>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+    <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <h2 id="contact-title" class="section__title">Kontak</h2>
-        <p class="contact__lead">Terbuka untuk peluang kerja, magang, dan kolaborasi.</p>
+        <p class="eyebrow eyebrow--light">06 — Kontak</p>
+        <div class="contact-panel">
+          <h2 id="contact-title" class="contact-panel__title">Punya project atau kesempatan kerja?<br><span class="grad">Mari terhubung.</span></h2>
+          <p class="contact-panel__lead">Terbuka untuk peluang kerja, magang, dan kolaborasi di bidang IT / web development.</p>
+          <div class="contact-panel__cta">
+            <a class="btn btn--white" href="mailto:danuranggana9@gmail.com">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              danuranggana9@gmail.com
+            </a>
+            <a class="btn btn--white-ghost" href="tel:+6289501927317">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +62 895-0192-7317
+            </a>
+          </div>
+        </div>
         <div class="contact">
-          <a class="contact__item" href="mailto:danuranggana9@gmail.com">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-            <span>danuranggana9@gmail.com</span>
-          </a>
-          <a class="contact__item" href="tel:+6289501927317">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>+62 895-0192-7317</span>
-          </a>
           <a class="contact__item" href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-            <span>linkedin.com/in/danuranggana</span>
+            <span>LinkedIn</span>
+            <em aria-hidden="true">linkedin.com/in/danuranggana</em>
           </a>
           <a class="contact__item" href="https://github.com/DanU-R" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            <span>github.com/DanU-R</span>
+            <span>GitHub</span>
+            <em aria-hidden="true">github.com/DanU-R</em>
           </a>
         </div>
       </div>
