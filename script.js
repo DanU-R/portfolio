@@ -1,21 +1,10 @@
 /* Portfolio — vanilla JS, no dependencies.
-   nav toggle · smooth scroll + active nav · reveal · print CV */
+   nav toggle · active nav · print CV */
 
 (function () {
   "use strict";
 
   document.documentElement.classList.add("js");
-
-  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  // ---- Header hairline on scroll ----
-  var header = document.querySelector(".site-header");
-  function onScroll() {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 4);
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
 
   // ---- Mobile nav toggle ----
   var toggle = document.querySelector(".nav__toggle");
