@@ -67,32 +67,6 @@
     sections.forEach(function (s) { navObserver.observe(s); });
   }
 
-  // ---- Scroll reveal (subtle, one-shot) ----
-  var revealEls = document.querySelectorAll(
-    ".about__lead, .about__cols > p, .entry, .proj, .skills__row, .edu, .contact__title, .contact__ctas"
-  );
-
-  function showAll() {
-    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-  }
-
-  if (prefersReduced || !("IntersectionObserver" in window)) {
-    showAll();
-  } else {
-    var revealObserver = new IntersectionObserver(
-      function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.05, rootMargin: "0px 0px -24px 0px" }
-    );
-    revealEls.forEach(function (el) { el.classList.add("reveal"); revealObserver.observe(el); });
-  }
-
   // ---- Download CV → print ----
   var btnCv = document.getElementById("btn-download-cv");
   if (btnCv) {
