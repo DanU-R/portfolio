@@ -50,41 +50,41 @@
 ## B. Task List
 
 ### Fase 1 — Scaffold
-- [ ] B1. Struktur folder sesuai PRD §8 (`index.html`, `styles.css`, `script.js`, `README.md`)
-- [ ] B2. `index.html` skeleton: meta/head (P1-4), `<header>` nav, `<main>` 7 section kosong, `<footer>`, `lang="id"` (P0-7)
+- [x] B1. Struktur folder sesuai PRD §8 (`index.html`, `styles.css`, `script.js`, `README.md`)
+- [x] B2. `index.html` skeleton: meta/head (P1-4), `<header>` nav, `<main>` 7 section kosong, `<footer>`, `lang="id"` (P0-7)
 
 ### Fase 2 — Konten (data PRD §5)
-- [ ] B3. Hero: nama, tagline, sub-text, CTA Download CV + Hubungi Saya (P0-2)
-- [ ] B4. About: paragraf profil
-- [ ] B5. Experience: kartu BPS + 5 poin
-- [ ] B6. Projects: 2 kartu (ikon SVG, deskripsi, badge, link GitHub `_blank rel=noopener`)
-- [ ] B7. Skills: 4 kategori badge
-- [ ] B8. Education & Certifications: 2 pendidikan + CCNAv7 + BNSP TKJ
-- [ ] B9. Contact: email `mailto:`, HP `tel:+6289501927317`, LinkedIn, GitHub (P0-5)
+- [x] B3. Hero: nama, tagline, sub-text, CTA Download CV + Hubungi Saya (P0-2)
+- [x] B4. About: paragraf profil
+- [x] B5. Experience: kartu BPS + 5 poin
+- [x] B6. Projects: 2 kartu (ikon SVG, deskripsi, badge, link GitHub `_blank rel=noopener`)
+- [x] B7. Skills: 4 kategori badge
+- [x] B8. Education & Certifications: 2 pendidikan + CCNAv7 + BNSP TKJ
+- [x] B9. Contact: email `mailto:`, HP `tel:+6289501927317`, LinkedIn, GitHub (P0-5)
 
 ### Fase 3 — Styling
-- [ ] C1. Base: CSS reset ringan, system font, warna token (CSS custom properties), container
-- [ ] C2. Component: nav sticky, hero, kartu project, badge skill, kartu contact, footer
-- [ ] C3. Responsive mobile-first: breakpoint 768px (nav hamburger, grid stack) — QA 360px & 1440px (P0-6)
-- [ ] C4. Print stylesheet `@media print` + `@page` A4: hide nav/CTA/footer, layout CV, urutan section, page-break rules, target 1–2 hal (P0-3, A1)
+- [x] C1. Base: CSS reset ringan, system font, warna token (CSS custom properties), container
+- [x] C2. Component: nav sticky, hero, kartu project, badge skill, kartu contact, footer
+- [x] C3. Responsive mobile-first: breakpoint 768px (nav hamburger, grid stack) — QA 360px & 1440px (P0-6)
+- [x] C4. Print stylesheet `@media print` + `@page` A4: hide nav/CTA/footer, layout CV, urutan section, page-break rules, target 1–2 hal (P0-3, A1)
 
 ### Fase 4 — JS
-- [ ] D1. Mobile nav toggle (aria-expanded, close on link click / Escape)
-- [ ] D2. Smooth scroll anchor + active nav highlight (IntersectionObserver)
-- [ ] D3. Scroll reveal (IntersectionObserver, respect reduced-motion)
-- [ ] D4. Tombol Download CV → `window.print()`
-- [ ] D5. Guard: semua JS di `defer`, 0 error console (P0-9)
+- [x] D1. Mobile nav toggle (aria-expanded, close on link click / Escape)
+- [x] D2. Smooth scroll anchor + active nav highlight (IntersectionObserver)
+- [x] D3. Scroll reveal (IntersectionObserver, respect reduced-motion)
+- [x] D4. Tombol Download CV → `window.print()`
+- [x] D5. Guard: semua JS di `defer`, 0 error console (P0-9)
 
 ### Fase 5 — QA (gate Definition of Done)
-- [ ] E1. HTML valid (validator.w3.org atau tidy)
-- [ ] E2. Console clean — semua link valid (klik semua: GitHub×2, LinkedIn, mailto, tel, anchor)
-- [ ] E3. Responsive: screenshot 360px & 1440px (headless Chrome) — layout rapi
-- [ ] E4. **Print QA: `google-chrome --headless --print-to-pdf` → inspect PDF 1–2 hal A4, urutan section benar, tidak ada elemen layar bocor**
-- [ ] E5. Lighthouse mobile: Perf ≥90, LCP <1.5s, transfer <100KB
-- [ ] E6. `README.md`: run local + deploy Vercel (git import, preset Other, no build)
+- [x] E1. HTML valid (validator.w3.org atau tidy)
+- [x] E2. Console clean — semua link valid (klik semua: GitHub×2, LinkedIn, mailto, tel, anchor)
+- [x] E3. Responsive: screenshot 360px & 1440px (headless Chrome) — layout rapi
+- [x] E4. **Print QA: `google-chrome --headless --print-to-pdf` → inspect PDF 1–2 hal A4, urutan section benar, tidak ada elemen layar bocor**
+- [x] E5. Lighthouse mobile: Perf ≥90, LCP <1.5s, transfer <100KB
+- [x] E6. `README.md`: run local + deploy Vercel (git import, preset Other, no build)
 
 ### Fase 6 — Deploy (butuh izin user / akses GitHub)
-- [ ] F1. Push repo `DanU-R/portfolio` (Q4 default — konfirmasi dulu)
+- [x] F1. Push repo `DanU-R/portfolio` (Q4 default — konfirmasi dulu)
 - [ ] F2. Vercel import → live → verify 200
 - [ ] F3. Screenshot live + share URL ke user
 
