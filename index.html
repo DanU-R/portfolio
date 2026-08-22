@@ -19,7 +19,7 @@
 <body>
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Navigasi utama">
-      <a class="nav__brand" href="#top">Danu Ranggana</a>
+      <a class="nav__brand" href="#top">Danu Ranggana<span class="nav__dot">.</span></a>
       <ul id="nav-menu" class="nav__menu">
         <li><a href="#about">Tentang</a></li>
         <li><a href="#experience">Pengalaman</a></li>
@@ -28,7 +28,7 @@
         <li><a href="#education">Pendidikan</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
-      <a class="nav__mark" href="#contact" aria-label="Ke kontak">Kontak →</a>
+      <a class="nav__cta" href="#contact">Kontak</a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu navigasi">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
       </button>
@@ -38,57 +38,86 @@
   <main>
     <!-- HERO -->
     <section class="hero" aria-label="Perkenalan">
-      <div class="hero__wrap">
-        <p class="hero__meta">Portofolio — 2026 · Pemalang / Pekalongan, Jawa Tengah</p>
-        <h1 class="hero__title">Danu<br>Ranggana<span class="hero__dot">.</span></h1>
-        <p class="hero__role">Fresh Graduate Informatics — AI-Powered Problem Solver — Tech Enthusiast</p>
-        <p class="hero__contact">
-          <a href="mailto:danuranggana9@gmail.com">danuranggana9@gmail.com</a>
-          <a href="tel:+6289501927317">+62 895-0192-7317</a>
-          <a href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener">linkedin.com/in/danuranggana</a>
-          <a href="https://github.com/DanU-R" target="_blank" rel="noopener">github.com/DanU-R</a>
-        </p>
-        <div class="hero__foot">
-          <p class="hero__note">S1 Teknik Informatika, IPK 3,53 (Dengan Pujian). Saat ini terbuka untuk posisi <strong>web development</strong> dan <strong>IT</strong> — full-time atau magang lanjutan.</p>
+      <div class="hero__grid">
+        <div class="hero__left">
+          <p class="hero__meta">
+            <span class="hero__pulse" aria-hidden="true"></span>
+            Open to work — Web Development &amp; IT
+          </p>
+          <h1 class="hero__title">Danu Ranggana</h1>
+          <p class="hero__tag">Fresh graduate Teknik Informatika yang membangun web, mengelola data, dan sedang mendalami AI agent.</p>
+          <p class="hero__printcontact">
+            <a href="mailto:danuranggana9@gmail.com">danuranggana9@gmail.com</a>
+            <a href="tel:+6289501927317">+62 895-0192-7317</a>
+            <a href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener">linkedin.com/in/danuranggana</a>
+            <a href="https://github.com/DanU-R" target="_blank" rel="noopener">github.com/DanU-R</a>
+          </p>
           <div class="hero__cta">
             <button type="button" class="btn" id="btn-download-cv">
               Download CV
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </button>
-            <a class="btn btn--link" href="#contact">Hubungi saya</a>
+            <a class="hero__mail" href="mailto:danuranggana9@gmail.com">danuranggana9@gmail.com</a>
           </div>
         </div>
+        <aside class="hero__panel" aria-label="Ringkasan">
+          <div class="hero__avatar" aria-hidden="true">DR</div>
+          <dl class="hero__facts">
+            <div class="hero__fact"><dt>IPK</dt><dd>3,53 — Dengan Pujian</dd></div>
+            <div class="hero__fact"><dt>Pendidikan</dt><dd>S1 Teknik Informatika<br>2021 – 2025</dd></div>
+            <div class="hero__fact"><dt>Pengalaman</dt><dd>Magang BPS Pemalang<br>4 bulan — pengolahan data &amp; IT</dd></div>
+            <div class="hero__fact"><dt>Sertifikasi</dt><dd>CCNAv7 · BNSP TKJ</dd></div>
+          </dl>
+        </aside>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="section" id="about" aria-labelledby="about-title">
-      <div class="section__head">
-        <span class="section__index">01</span>
-        <h2 id="about-title" class="section__title">Tentang</h2>
-      </div>
-      <div class="container about">
-        <p class="about__lead">Fresh graduate S1 Teknik Informatika dengan IPK <strong>3,53 (Dengan Pujian)</strong> — fondasi kuat di pengembangan web dan pengelolaan database.</p>
-        <div class="about__cols">
-          <p>Selama empat semester terakhir, fokus saya jatuh pada <strong>PHP, Laravel, dan JavaScript</strong> di sisi server, serta <strong>MySQL dan PostgreSQL</strong> untuk data. Saya terbiasa menyelesaikan masalah dari sisi yang paling dekat dengan akar masalahnya — bukan sekadar menutup gejalanya.</p>
-          <p>Pengalaman magang di Badan Pusat Statistik melatih hal yang tak diajarkan kuliah: bekerja dengan data nyata, deadline nyata, dan orang nyata. Saat ini saya juga sedang mendalami <strong>AI agent (Hermes)</strong> secara mandiri.</p>
+      <div class="container">
+        <div class="head">
+          <span class="head__no">01</span>
+          <h2 id="about-title" class="head__title">Tentang</h2>
+        </div>
+        <div class="about">
+          <div class="about__text">
+            <p class="about__lead">Fresh graduate S1 Teknik Informatika dengan IPK <strong>3,53 (Dengan Pujian)</strong> — fondasi kuat di pengembangan web dan pengelolaan database.</p>
+            <p>Selama empat semester terakhir, fokus saya jatuh pada <strong>PHP, Laravel, dan JavaScript</strong> di sisi server, serta <strong>MySQL dan PostgreSQL</strong> untuk data. Saya terbiasa menyelesaikan masalah dari sisi yang paling dekat dengan akar masalahnya — bukan sekadar menutup gejalanya.</p>
+            <p>Pengalaman magang di Badan Pusat Statistik melatih hal yang tak diajarkan kuliah: bekerja dengan data nyata, deadline nyata, dan orang nyata. Saat ini saya juga sedang mendalami <strong>AI agent (Hermes)</strong> secara mandiri.</p>
+          </div>
+          <ul class="about__highlights" aria-label="Sorotan">
+            <li>
+              <h3>Dengan Pujian</h3>
+              <p>IPK 3,53 dari Institut Widya Pratama Pekalongan — salah satu yang terbaik di angkatan.</p>
+            </li>
+            <li>
+              <h3>4 bulan di BPS</h3>
+              <p>Magang pengolahan data &amp; IT support: monitoring, troubleshooting, validasi, dokumentasi.</p>
+            </li>
+            <li>
+              <h3>Sedang mendalami AI agent</h3>
+              <p>Membangun dan mengoperasikan AI agent (Hermes) untuk otomasi kerja harian.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="section" id="experience" aria-labelledby="exp-title">
-      <div class="section__head">
-        <span class="section__index">02</span>
-        <h2 id="exp-title" class="section__title">Pengalaman</h2>
-      </div>
+    <section class="section section--alt" id="experience" aria-labelledby="exp-title">
       <div class="container">
-        <article class="entry">
-          <div class="entry__period">Maret – Juni 2024</div>
-          <div class="entry__body">
-            <h3 class="entry__role">Magang — Pengolahan Data &amp; IT Support</h3>
-            <p class="entry__org">Badan Pusat Statistik (BPS) Kabupaten Pemalang</p>
-            <ul class="entry__list">
+        <div class="head">
+          <span class="head__no">02</span>
+          <h2 id="exp-title" class="head__title">Pengalaman</h2>
+        </div>
+        <article class="exp">
+          <div class="exp__left">
+            <span class="exp__period">Maret – Juni 2024</span>
+            <span class="exp__org">Badan Pusat Statistik (BPS)<br>Kabupaten Pemalang</span>
+          </div>
+          <div class="exp__right">
+            <h3 class="exp__role">Magang — Pengolahan Data &amp; IT Support</h3>
+            <ul class="exp__list">
               <li>Menjaga operasional aplikasi internal (monitoring &amp; maintenance).</li>
               <li>Troubleshooting dan testing aplikasi internal.</li>
               <li>Verifikasi dan validasi data.</li>
@@ -100,106 +129,122 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (focal point) -->
     <section class="section" id="projects" aria-labelledby="proj-title">
-      <div class="section__head">
-        <span class="section__index">03</span>
-        <h2 id="proj-title" class="section__title">Proyek</h2>
-      </div>
       <div class="container">
-        <article class="proj">
-          <header class="proj__head">
-            <span class="proj__no">P.01</span>
-            <span class="proj__tag">Web Platform</span>
-            <a class="proj__repo" href="https://github.com/DanU-R/company-profile" target="_blank" rel="noopener">github.com/DanU-R/company-profile ↗</a>
-          </header>
-          <h3 class="proj__title">Digitalisasi Sistem Informasi Sekolah</h3>
-          <p class="proj__desc">Platform web profil sekolah — informasi sekolah ditampilkan secara digital dan terpusat: profil, struktur, kegiatan, dan kontak dalam satu halaman.</p>
-          <p class="proj__stack">Laravel · Tailwind CSS · MySQL</p>
-        </article>
-        <article class="proj">
-          <header class="proj__head">
-            <span class="proj__no">P.02</span>
-            <span class="proj__tag">Automation</span>
-            <a class="proj__repo" href="https://github.com/DanU-R/gsuite_workspace" target="_blank" rel="noopener">github.com/DanU-R/gsuite_workspace ↗</a>
-          </header>
-          <h3 class="proj__title">Google Workspace AutoBot</h3>
-          <p class="proj__desc">Toolkit otomasi Python untuk pengelolaan Google Workspace Admin — pengurangan kerja manual berulang di sisi administrasi.</p>
-          <p class="proj__stack">Python · Selenium</p>
-        </article>
+        <div class="head">
+          <span class="head__no">03</span>
+          <h2 id="proj-title" class="head__title">Proyek</h2>
+          <p class="head__sub">Dua proyek utama — satu web platform, satu otomasi. Kode sumber terbuka.</p>
+        </div>
+        <div class="proj-grid">
+          <article class="proj">
+            <div class="proj__top">
+              <span class="proj__tag">Web Platform</span>
+              <a class="proj__repo" href="https://github.com/DanU-R/company-profile" target="_blank" rel="noopener">github.com/DanU-R/company-profile ↗</a>
+            </div>
+            <h3 class="proj__title">Digitalisasi Sistem Informasi Sekolah</h3>
+            <p class="proj__desc">Platform web profil sekolah — informasi sekolah ditampilkan secara digital dan terpusat: profil, struktur, kegiatan, dan kontak dalam satu halaman.</p>
+            <ul class="proj__stack" aria-label="Teknologi">
+              <li>Laravel</li>
+              <li>Tailwind CSS</li>
+              <li>MySQL</li>
+            </ul>
+          </article>
+          <article class="proj">
+            <div class="proj__top">
+              <span class="proj__tag">Automation</span>
+              <a class="proj__repo" href="https://github.com/DanU-R/gsuite_workspace" target="_blank" rel="noopener">github.com/DanU-R/gsuite_workspace ↗</a>
+            </div>
+            <h3 class="proj__title">Google Workspace AutoBot</h3>
+            <p class="proj__desc">Toolkit otomasi Python untuk pengelolaan Google Workspace Admin — pengurangan kerja manual berulang di sisi administrasi.</p>
+            <ul class="proj__stack" aria-label="Teknologi">
+              <li>Python</li>
+              <li>Selenium</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="section__head">
-        <span class="section__index">04</span>
-        <h2 id="skills-title" class="section__title">Skills</h2>
-      </div>
-      <div class="container skills">
-        <div class="skills__row">
-          <span class="skills__cat">Database</span>
-          <p class="skills__items">MySQL &nbsp;·&nbsp; PostgreSQL</p>
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="head">
+          <span class="head__no">04</span>
+          <h2 id="skills-title" class="head__title">Skills</h2>
         </div>
-        <div class="skills__row">
-          <span class="skills__cat">Backend</span>
-          <p class="skills__items">PHP &nbsp;·&nbsp; Laravel &nbsp;·&nbsp; REST API</p>
-        </div>
-        <div class="skills__row">
-          <span class="skills__cat">Frontend</span>
-          <p class="skills__items">JavaScript &nbsp;·&nbsp; HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; Bootstrap</p>
-        </div>
-        <div class="skills__row">
-          <span class="skills__cat">Tools</span>
-          <p class="skills__items">Git &nbsp;·&nbsp; Microsoft Excel &nbsp;·&nbsp; VS Code &nbsp;·&nbsp; Linux</p>
+        <div class="skills-grid">
+          <div class="skill">
+            <h3 class="skill__cat">Database</h3>
+            <p class="skill__items">MySQL, PostgreSQL</p>
+          </div>
+          <div class="skill">
+            <h3 class="skill__cat">Backend</h3>
+            <p class="skill__items">PHP, Laravel, REST API</p>
+          </div>
+          <div class="skill">
+            <h3 class="skill__cat">Frontend</h3>
+            <p class="skill__items">JavaScript, HTML, CSS, Bootstrap</p>
+          </div>
+          <div class="skill">
+            <h3 class="skill__cat">Tools</h3>
+            <p class="skill__items">Git, Microsoft Excel, VS Code, Linux</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION & CERTIFICATIONS -->
+    <!-- EDUCATION -->
     <section class="section" id="education" aria-labelledby="edu-title">
-      <div class="section__head">
-        <span class="section__index">05</span>
-        <h2 id="edu-title" class="section__title">Pendidikan &amp; Sertifikasi</h2>
-      </div>
       <div class="container">
-        <div class="edu">
-          <div class="edu__period">2021 – 2025</div>
-          <div class="edu__body">
-            <h3 class="entry__role">S1 Teknik Informatika</h3>
-            <p class="entry__org">Institut Widya Pratama Pekalongan</p>
-            <p class="edu__note">IPK 3,53 — <strong>Dengan Pujian</strong></p>
-          </div>
+        <div class="head">
+          <span class="head__no">05</span>
+          <h2 id="edu-title" class="head__title">Pendidikan &amp; Sertifikasi</h2>
         </div>
-        <div class="edu">
-          <div class="edu__period">2019 – 2021</div>
-          <div class="edu__body">
-            <h3 class="entry__role">SMK TKJ</h3>
-            <p class="entry__org">SMK Texmaco Pemalang</p>
+        <div class="edu-grid">
+          <article class="edu">
+            <span class="edu__period">2021 – 2025</span>
+            <h3 class="edu__role">S1 Teknik Informatika</h3>
+            <p class="edu__org">Institut Widya Pratama Pekalongan</p>
+            <p class="edu__note">IPK <strong>3,53</strong> — Dengan Pujian</p>
+          </article>
+          <article class="edu">
+            <span class="edu__period">2019 – 2021</span>
+            <h3 class="edu__role">SMK TKJ</h3>
+            <p class="edu__org">SMK Texmaco Pemalang</p>
             <p class="edu__note">Teknik Komputer &amp; Jaringan</p>
-          </div>
-        </div>
-        <div class="edu">
-          <div class="edu__period">Sertifikasi</div>
-          <div class="edu__body">
-            <p class="edu__certs"><strong>CCNAv7</strong> &nbsp;·&nbsp; <strong>BNSP TKJ</strong></p>
-          </div>
+          </article>
+          <article class="edu">
+            <span class="edu__period">Sertifikasi</span>
+            <h3 class="edu__role">Kualifikasi</h3>
+            <p class="edu__org">Sertifikasi profesi</p>
+            <p class="edu__note"><strong>CCNAv7</strong> · <strong>BNSP TKJ</strong></p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact">
-        <p class="contact__kicker">06 — Kontak</p>
-        <h2 id="contact-title" class="contact__title">Punya posisi atau<br>peluang untuk dibahas?</h2>
-        <p class="contact__lead">Terbuka untuk pekerjaan, magang, maupun kolaborasi di bidang IT / web development. Balas cepat — biasanya di hari yang sama.</p>
-        <div class="contact__ctas">
-          <a class="contact__big" href="mailto:danuranggana9@gmail.com">danuranggana9@gmail.com</a>
-          <div class="contact__alt">
-            <a href="tel:+6289501927317">+62 895-0192-7317</a>
-            <a href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a href="https://github.com/DanU-R" target="_blank" rel="noopener">GitHub ↗</a>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="head head--dark">
+          <span class="head__no">06</span>
+          <h2 id="contact-title" class="head__title">Kontak</h2>
+        </div>
+        <div class="contact__inner">
+          <div class="contact__left">
+            <h3 class="contact__big">Punya posisi atau peluang untuk dibahas?</h3>
+            <p class="contact__lead">Terbuka untuk pekerjaan, magang, maupun kolaborasi di bidang IT / web development. Balas cepat — biasanya di hari yang sama.</p>
+            <div class="contact__ctas">
+              <a class="btn btn--light" href="mailto:danuranggana9@gmail.com">Kirim email</a>
+              <a class="contact__alt" href="tel:+6289501927317">+62 895-0192-7317</a>
+            </div>
+          </div>
+          <div class="contact__right">
+            <a class="contact__line" href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener"><span>LinkedIn</span>linkedin.com/in/danuranggana ↗</a>
+            <a class="contact__line" href="https://github.com/DanU-R" target="_blank" rel="noopener"><span>GitHub</span>github.com/DanU-R ↗</a>
+            <p class="contact__loc">Pemalang / Pekalongan, Jawa Tengah</p>
           </div>
         </div>
       </div>
