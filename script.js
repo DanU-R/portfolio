@@ -8,11 +8,11 @@
 
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // ---- Header shadow on scroll ----
+  // ---- Header hairline on scroll ----
   var header = document.querySelector(".site-header");
   function onScroll() {
     if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 8);
+    header.classList.toggle("scrolled", window.scrollY > 4);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -67,9 +67,9 @@
     sections.forEach(function (s) { navObserver.observe(s); });
   }
 
-  // ---- Scroll reveal ----
+  // ---- Scroll reveal (subtle, one-shot) ----
   var revealEls = document.querySelectorAll(
-    ".hero__panel, .section .eyebrow ~ .section__title, .card, .timeline__content, .skills__group, .contact__item, .contact-panel, .hl"
+    ".about__lead, .about__cols > p, .entry, .proj, .skills__row, .edu, .contact__title, .contact__ctas"
   );
 
   function showAll() {
@@ -88,7 +88,7 @@
           }
         });
       },
-      { threshold: 0.06, rootMargin: "0px 0px -30px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -24px 0px" }
     );
     revealEls.forEach(function (el) { el.classList.add("reveal"); revealObserver.observe(el); });
   }
