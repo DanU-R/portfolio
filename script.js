@@ -65,4 +65,53 @@
   // ---- Footer year ----
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  // ---- Reduced-motion gate (motion only when user is fine with it) ----
+  var motionOK = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+
+  // ---- Navbar transition on scroll ----
+  var header = document.querySelector(".site-header");
+  function onScrollNav() {
+    if (!header) return;
+    header.classList.toggle("scrolled", window.scrollY > 8);
+  }
+  window.addEventListener("scroll", onScrollNav, { passive: true });
+  onScrollNav();
+
+  // ---- Scroll-reveal (subtle; only when motion allowed & observer present) ----
+  var revealEls = document.querySelectorAll(
+    ".section > .wrap, .about, .exp, .proj, .skills__row, .edu, .contact > .wrap"
+  );
+  revealEls.forEach(function (el) { el.classList.add("reveal"); });
+
+  if (motionOK && "IntersectionObserver" in window) {
+    var revealObs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            revealObs.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.12 }
+    );
+    revealEls.forEach(function (el) { revealObs.observe(el); });
+  } else {
+    // No motion or no observer: ensure everything is visible (safety net)
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  // ---- Back-to-top button ----
+  var toTop = document.querySelector(".to-top");
+  if (toTop) {
+    function onScrollTop() {
+      toTop.classList.toggle("show", window.scrollY > 640);
+    }
+    window.addEventListener("scroll", onScrollTop, { passive: true });
+    onScrollTop();
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: motionOK ? "smooth" : "auto" });
+    });
+  }
 })();
