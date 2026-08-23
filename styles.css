@@ -701,6 +701,10 @@ img { max-width: 100%; display: block; }
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
 }
+@keyframes revealIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
@@ -724,22 +728,23 @@ img { max-width: 100%; display: block; }
       floaty 6s ease-in-out 1.5s infinite;
   }
 
-  /* ---- Scroll-reveal (subtle, non-gating: only html.js, never in print) ---- */
-  html.js .reveal {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity .5s ease, transform .5s cubic-bezier(.22, 1, .36, 1);
+  /* ---- Scroll-reveal (subtle, ENHANCEMENT-ONLY).
+        Resting state is fully visible, so no-JS / static / full-page capture /
+        print / reduced-motion all show every section. `.in` just plays a
+        one-shot entry animation when the element is scrolled into view. ---- */
+  html.js .reveal { opacity: 1; }
+  html.js .reveal.in {
+    animation: revealIn .55s cubic-bezier(.22, 1, .36, 1) both;
   }
-  html.js .reveal.in { opacity: 1; transform: none; }
 
-  /* stagger */
-  html.js .about.reveal { transition-delay: .08s; }
-  html.js .proj.reveal:nth-child(2) { transition-delay: .1s; }
-  html.js .skills__row.reveal:nth-child(2) { transition-delay: .06s; }
-  html.js .skills__row.reveal:nth-child(3) { transition-delay: .12s; }
-  html.js .skills__row.reveal:nth-child(4) { transition-delay: .18s; }
-  html.js .edu.reveal:nth-child(2) { transition-delay: .08s; }
-  html.js .edu.reveal:nth-child(3) { transition-delay: .16s; }
+  /* stagger (only matters while the entry animation runs in a real browser) */
+  html.js .about.reveal.in { animation-delay: .08s; }
+  html.js .proj.reveal:nth-child(2).in { animation-delay: .1s; }
+  html.js .skills__row.reveal:nth-child(2).in { animation-delay: .06s; }
+  html.js .skills__row.reveal:nth-child(3).in { animation-delay: .12s; }
+  html.js .skills__row.reveal:nth-child(4).in { animation-delay: .18s; }
+  html.js .edu.reveal:nth-child(2).in { animation-delay: .08s; }
+  html.js .edu.reveal:nth-child(3).in { animation-delay: .16s; }
 
   /* ---- Navbar on scroll ---- */
   .site-header { transition: box-shadow .25s ease, background-color .25s ease; }
