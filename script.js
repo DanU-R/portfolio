@@ -78,9 +78,13 @@
   window.addEventListener("scroll", onScrollNav, { passive: true });
   onScrollNav();
 
-  // ---- Scroll-reveal (subtle; only when motion allowed & observer present) ----
+  // ---- Scroll-reveal (subtle; ENHANCEMENT-ONLY).
+  //      Targets are non-nested leaf blocks: a section's container is NOT also
+  //      a target, so no element animates on top of its own animated children.
+  //      Resting state is fully visible (see CSS) -> no-JS / static / print /
+  //      reduced-motion all render every section. `in` only plays an entry. ----
   var revealEls = document.querySelectorAll(
-    ".section > .wrap, .about, .exp, .proj, .skills__row, .edu, .contact > .wrap"
+    ".about, .exp, .proj, .skills__row, .edu, .contact__grid"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 
