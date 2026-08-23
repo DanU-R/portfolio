@@ -59,6 +59,7 @@
           </p>
         </div>
         <aside class="hero__aside" aria-label="Ringkasan">
+          <img class="aside__avatar" src="avatar.jpg" alt="Foto Danu Ranggana" width="64" height="64">
           <dl class="facts">
             <div class="fact"><dt>IPK</dt><dd>3,53 — Dengan Pujian</dd></div>
             <div class="fact"><dt>Pendidikan</dt><dd>S1 Teknik Informatika<br>2021 – 2025</dd></div>
@@ -129,8 +130,22 @@
         </div>
         <div class="proj-grid">
           <article class="proj">
-            <figure class="proj__media">
-              <img src="assets-proj1.jpg" alt="Tampilan aplikasi profil perusahaan — proyek Digitalisasi Sistem Informasi Sekolah" loading="lazy">
+            <figure class="proj__media proj__media--code" aria-hidden="true">
+              <div class="code">
+                <div class="code__bar">
+                  <span class="code__file">ProfilController.php</span>
+                  <span class="code__dots"><i></i><i></i><i></i></span>
+                </div>
+                <pre class="code__body"><code><span class="tk-cm">// routes — profil sekolah terpusat</span>
+<span class="tk-kw">Route</span>::<span class="tk-fn">get</span>(<span class="tk-str">'/profil'</span>, <span class="tk-kw">function</span> () {
+    $sekolah = <span class="tk-fn">Sekolah</span>::with([
+        <span class="tk-str">'struktur'</span>, <span class="tk-str">'kegiatan'</span>
+    ])<span class="tk-fn"></span><span class="tk-fn">first</span>();
+
+    <span class="tk-kw">return</span> <span class="tk-fn">view</span>(<span class="tk-str">'profil.index'</span>,
+        <span class="tk-fn">compact</span>(<span class="tk-str">'sekolah'</span>));
+});</code></pre>
+              </div>
             </figure>
             <div class="proj__body">
               <div class="proj__meta">
