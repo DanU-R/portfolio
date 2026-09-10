@@ -130,22 +130,8 @@
         </div>
         <div class="proj-grid">
           <article class="proj">
-            <figure class="proj__media proj__media--code" aria-hidden="true">
-              <div class="code">
-                <div class="code__bar">
-                  <span class="code__file">ProfilController.php</span>
-                  <span class="code__dots"><i></i><i></i><i></i></span>
-                </div>
-                <pre class="code__body"><code><span class="tk-cm">// routes: profil sekolah terpusat</span>
-<span class="tk-kw">Route</span>::<span class="tk-fn">get</span>(<span class="tk-str">'/profil'</span>, <span class="tk-kw">function</span> () {
-    $sekolah = <span class="tk-fn">Sekolah</span>::with([
-        <span class="tk-str">'struktur'</span>, <span class="tk-str">'kegiatan'</span>
-    ])<span class="tk-fn"></span><span class="tk-fn">first</span>();
-
-    <span class="tk-kw">return</span> <span class="tk-fn">view</span>(<span class="tk-str">'profil.index'</span>,
-        <span class="tk-fn">compact</span>(<span class="tk-str">'sekolah'</span>));
-});</code></pre>
-              </div>
+            <figure class="proj__media" aria-hidden="true">
+              <img src="sekolah-preview.png" alt="Digitalisasi Sistem Informasi Sekolah preview" loading="lazy">
             </figure>
             <div class="proj__body">
               <div class="proj__meta">
