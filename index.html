@@ -351,52 +351,62 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Backend -->
-            <div class="reveal-scale p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-brand-600/5 transition-all group">
-              <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 mb-6 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+            <div class="reveal-scale p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-brand-600/5 transition-all group flex items-start gap-5">
+              <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                 <iconify-icon icon="lucide:server"></iconify-icon>
               </div>
-              <h3 class="font-bold mb-4">Backend</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PHP</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Laravel</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">REST API</span>
+              <div>
+                <h3 class="font-bold mb-3">Backend</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PHP</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Laravel</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">REST API</span>
+                </div>
               </div>
-
+            </div>
             <!-- Frontend -->
-            <div class="reveal-scale delay-100 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-emerald-600/5 transition-all group">
-              <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 mb-6 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+            <div class="reveal-scale delay-100 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-emerald-600/5 transition-all group flex items-start gap-5">
+              <div class="w-12 h-12 shrink-0 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                 <iconify-icon icon="lucide:monitor"></iconify-icon>
               </div>
-              <h3 class="font-bold mb-4">Frontend</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">JavaScript</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">HTML/CSS</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Bootstrap</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Tailwind</span>
+              <div>
+                <h3 class="font-bold mb-3">Frontend</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">JavaScript</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">HTML/CSS</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Bootstrap</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Tailwind</span>
+                </div>
               </div>
             </div>
 
             <!-- Database -->
-            <div class="reveal-scale delay-200 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-amber-600/5 transition-all group">
-              <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-900/20 text-amber-600 mb-6 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+            <div class="reveal-scale delay-200 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-amber-600/5 transition-all group flex items-start gap-5">
+              <div class="w-12 h-12 shrink-0 rounded-2xl bg-amber-50 dark:bg-amber-900/20 text-amber-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                 <iconify-icon icon="lucide:database"></iconify-icon>
-              <h3 class="font-bold mb-4">Database</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">MySQL</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PostgreSQL</span>
+              </div>
+              <div>
+                <h3 class="font-bold mb-3">Database</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">MySQL</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PostgreSQL</span>
+                </div>
               </div>
             </div>
 
             <!-- Tools -->
-            <div class="reveal-scale delay-300 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-purple-600/5 transition-all group">
-              <div class="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-purple-600 mb-6 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+            <div class="reveal-scale delay-300 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-purple-600/5 transition-all group flex items-start gap-5">
+              <div class="w-12 h-12 shrink-0 rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-purple-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                 <iconify-icon icon="lucide:tool"></iconify-icon>
-              <h3 class="font-bold mb-4">Tools</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Git</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Excel</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">VS Code</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Linux</span>
+              </div>
+              <div>
+                <h3 class="font-bold mb-3">Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Git</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Excel</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">VS Code</span>
+                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Linux</span>
+                </div>
               </div>
             </div>
           </div>
