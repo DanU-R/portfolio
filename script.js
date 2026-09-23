@@ -1,4 +1,5 @@
-/* Portfolio v2 — sidebar toggle, scroll reveal, theme switcher, nav highlight.
+/* Portfolio v2 — sidebar toggle, scroll reveal, theme switcher, nav highlight,
+   count-up, skill bars, 3D tilt, parallax hero, scroll progress.
    Loaded with defer → DOM is ready. */
 
 // ===== Theme Switcher (global — called by inline onclick) =====
@@ -88,6 +89,106 @@ var observer = new IntersectionObserver(function (entries) {
 document.querySelectorAll('.reveal, .reveal-scale').forEach(function (el) {
   observer.observe(el);
 });
+
+// ===== Count-Up Animation (hero stat cards) =====
+
+var countObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+    var el = entry.target;
+    var target = parseFloat(el.dataset.count);
+    var decimals = parseInt(el.dataset.decimals, 10) || 0;
+    var duration = 1800;
+    var startTime = null;
+
+    function animate(time) {
+      if (!startTime) startTime = time;
+      var progress = Math.min((time - startTime) / duration, 1);
+      // easeOutExpo
+      var eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      var current = target * eased;
+      el.textContent = decimals > 0
+        ? current.toFixed(decimals)
+        : Math.floor(current).toString();
+      if (progress < 1) requestAnimationFrame(animate);
+      else el.textContent = decimals > 0
+        ? target.toFixed(decimals)
+        : Math.round(target).toString();
+    }
+
+    requestAnimationFrame(animate);
+    countObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count]').forEach(function (el) {
+  countObserver.observe(el);
+});
+
+// ===== Skill Bar Animation =====
+
+var skillObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+    var bar = entry.target;
+    var pct = bar.dataset.progress;
+    // Stagger each bar slightly for cascade feel
+    var delay = Array.from(bar.closest('.space-y-3').querySelectorAll('.skill-bar')).indexOf(bar) * 80;
+    setTimeout(function () {
+      bar.style.width = pct + '%';
+    }, delay);
+    skillObserver.unobserve(bar);
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.skill-bar').forEach(function (el) {
+  skillObserver.observe(el);
+});
+
+// ===== 3D Tilt Card Hover =====
+
+var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!prefersReduced) {
+  document.querySelectorAll('.tilt-card').forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = 'perspective(1000px) rotateX(' + (-y * 6) + 'deg) rotateY(' + (x * 6) + 'deg) translateY(-8px)';
+    });
+
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = '';
+    });
+  });
+}
+
+// ===== Parallax Hero Background =====
+
+var heroBg = document.querySelector('.hero-bg');
+
+if (heroBg && !prefersReduced) {
+  window.addEventListener('scroll', function () {
+    var scrolled = window.pageYOffset;
+    if (scrolled < 800) {
+      heroBg.style.transform = 'translateY(' + (scrolled * 0.4) + 'px)';
+    }
+  }, { passive: true });
+}
+
+// ===== Scroll Progress Bar =====
+
+var progressBar = document.getElementById('scroll-progress');
+
+if (progressBar) {
+  window.addEventListener('scroll', function () {
+    var scrollTop = window.pageYOffset;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? scrollTop / docHeight : 0;
+    progressBar.style.transform = 'scaleX(' + pct + ')';
+  }, { passive: true });
+}
 
 // ===== Nav Highlighting on Scroll =====
 

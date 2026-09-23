@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
+<div id="scroll-progress" class="fixed top-0 left-0 w-full h-1 z-[100] bg-brand-500 origin-left scale-x-0"></div>
 <body class="bg-slate-50 dark:bg-slate-950">
   <div id="root" class="min-h-screen transition-colors duration-300">
     
@@ -143,7 +144,7 @@
                   <iconify-icon icon="lucide:award"></iconify-icon>
                 </div>
                 <div>
-                  <div class="text-2xl font-jakarta font-bold text-white">3.53</div>
+                  <div class="text-2xl font-jakarta font-bold text-white" data-count="3.53" data-decimals="2">0.00</div>
                   <div class="text-sm text-slate-400">IPK</div>
                 </div>
               </div>
@@ -152,7 +153,7 @@
                   <iconify-icon icon="lucide:graduation-cap"></iconify-icon>
                 </div>
                 <div>
-                  <div class="text-2xl font-jakarta font-bold text-white">2025</div>
+                  <div class="text-2xl font-jakarta font-bold text-white" data-count="2025" data-decimals="0">0</div>
                   <div class="text-sm text-slate-400">Tahun Lulus</div>
                 </div>
               </div>
@@ -290,7 +291,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- Project 1 -->
-            <div class="reveal-scale group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-brand-600/10 hover:-translate-y-2 transition-all duration-300 flex flex-col">
+            <div class="reveal-scale tilt-card group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-brand-600/10 hover:-translate-y-2 transition-all duration-300 flex flex-col">
               <div class="aspect-video bg-slate-200 dark:bg-slate-800 overflow-hidden relative">
                 <img src="sekolah-preview.png" alt="Digitalisasi Sistem Informasi Sekolah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                 <div class="absolute top-4 right-4">
@@ -314,7 +315,7 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="reveal-scale delay-100 group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-brand-600/10 hover:-translate-y-2 transition-all duration-300 flex flex-col">
+            <div class="reveal-scale delay-100 tilt-card group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-brand-600/10 hover:-translate-y-2 transition-all duration-300 flex flex-col">
               <div class="aspect-video bg-slate-200 dark:bg-slate-800 overflow-hidden relative">
                 <img src="temanten-preview.png" alt="Temanten — Undangan Pernikahan Digital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                 <div class="absolute top-4 right-4">
@@ -355,12 +356,20 @@
                 <iconify-icon icon="lucide:server"></iconify-icon>
               </div>
               <h3 class="font-bold mb-4">Backend</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PHP</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Laravel</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">REST API</span>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>PHP</span><span class="text-slate-400">90%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-brand-500" data-progress="90"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>Laravel</span><span class="text-slate-400">85%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-brand-500" data-progress="85"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>REST API</span><span class="text-slate-400">80%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-brand-500" data-progress="80"></div></div>
+                </div>
               </div>
-            </div>
 
             <!-- Frontend -->
             <div class="reveal-scale delay-100 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-emerald-600/5 transition-all group">
@@ -368,11 +377,23 @@
                 <iconify-icon icon="lucide:monitor"></iconify-icon>
               </div>
               <h3 class="font-bold mb-4">Frontend</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">JavaScript</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">HTML/CSS</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Bootstrap</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Tailwind</span>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>JavaScript</span><span class="text-slate-400">85%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-emerald-500" data-progress="85"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>HTML/CSS</span><span class="text-slate-400">90%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-emerald-500" data-progress="90"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>Bootstrap</span><span class="text-slate-400">85%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-emerald-500" data-progress="85"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>Tailwind</span><span class="text-slate-400">80%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-emerald-500" data-progress="80"></div></div>
+                </div>
               </div>
             </div>
 
@@ -380,11 +401,16 @@
             <div class="reveal-scale delay-200 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-amber-600/5 transition-all group">
               <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-900/20 text-amber-600 mb-6 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                 <iconify-icon icon="lucide:database"></iconify-icon>
-              </div>
               <h3 class="font-bold mb-4">Database</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">MySQL</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PostgreSQL</span>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>MySQL</span><span class="text-slate-400">90%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-amber-500" data-progress="90"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>PostgreSQL</span><span class="text-slate-400">75%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-amber-500" data-progress="75"></div></div>
+                </div>
               </div>
             </div>
 
@@ -392,13 +418,24 @@
             <div class="reveal-scale delay-300 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-purple-600/5 transition-all group">
               <div class="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-purple-600 mb-6 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                 <iconify-icon icon="lucide:tool"></iconify-icon>
-              </div>
               <h3 class="font-bold mb-4">Tools</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Git</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Excel</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">VS Code</span>
-                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Linux</span>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>Git</span><span class="text-slate-400">85%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-purple-500" data-progress="85"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>Excel</span><span class="text-slate-400">80%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-purple-500" data-progress="80"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>VS Code</span><span class="text-slate-400">90%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-purple-500" data-progress="90"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs mb-1"><span>Linux</span><span class="text-slate-400">75%</span></div>
+                  <div class="h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden"><div class="skill-bar h-full rounded-full bg-purple-500" data-progress="75"></div></div>
+                </div>
               </div>
             </div>
           </div>

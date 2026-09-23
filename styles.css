@@ -53,6 +53,8 @@ h1, h2, h3, .font-jakarta {
     url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  will-change: transform;
 }
 
 /* ===== Glass Cards ===== */
@@ -132,6 +134,46 @@ h1, h2, h3, .font-jakarta {
   transform: scale(1) translateY(0);
 }
 
+/* ===== Skill Bar Animation ===== */
+
+.skill-bar {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .skill-bar { transition: none; }
+}
+
+/* ===== 3D Tilt Card ===== */
+
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.tilt-card > * {
+  transform-style: preserve-3d;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card { transform-style: flat; }
+}
+
+/* ===== Scroll Progress Bar ===== */
+
+#scroll-progress {
+  transition: transform 0.05s linear;
+  transform-origin: left;
+}
+@media (prefers-reduced-motion: reduce) {
+  #scroll-progress { display: none; }
+}
+
+/* ===== Enhanced Scroll Reveal: Stagger Children ===== */
+
+.reveal.active > .reveal-scale,
+.reveal-scale.active > .reveal-scale {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
@@ -393,6 +435,18 @@ h1, h2, h3, .font-jakarta {
   #education h3 { font-size: 9pt !important; }
   #education .text-brand-600 { color: #444 !important; font-size: 8pt !important; }
 
+  /* ---- New animation elements: static in print ---- */
+  #scroll-progress { display: none !important; }
+  .hero-bg { background-attachment: scroll !important; transform: none !important; }
+  .tilt-card { transform: none !important; }
+  .skill-bar { transition: none !important; }
+  #skills .space-y-3 { display: block !important; }
+  #skills .h-2 { display: none !important; }
+  #skills .flex { display: block !important; }
+  #skills .space-y-3 > div > div:first-child {
+    display: inline !important;
+  }
+  #skills .space-y-3 > div > .h-2 { display: none !important; }
   /* ---- Remove all rounded corners in print ---- */
   .rounded-3xl, .rounded-2xl, .rounded-xl, .rounded-lg, .rounded-full {
     border-radius: 0 !important;
