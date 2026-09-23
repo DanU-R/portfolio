@@ -125,25 +125,6 @@ document.querySelectorAll('[data-count]').forEach(function (el) {
   countObserver.observe(el);
 });
 
-// ===== Skill Bar Animation =====
-
-var skillObserver = new IntersectionObserver(function (entries) {
-  entries.forEach(function (entry) {
-    if (!entry.isIntersecting) return;
-    var bar = entry.target;
-    var pct = bar.dataset.progress;
-    // Stagger each bar slightly for cascade feel
-    var delay = Array.from(bar.closest('.space-y-3').querySelectorAll('.skill-bar')).indexOf(bar) * 80;
-    setTimeout(function () {
-      bar.style.width = pct + '%';
-    }, delay);
-    skillObserver.unobserve(bar);
-  });
-}, { threshold: 0.3 });
-
-document.querySelectorAll('.skill-bar').forEach(function (el) {
-  skillObserver.observe(el);
-});
 
 // ===== 3D Tilt Card Hover =====
 
