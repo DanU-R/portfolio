@@ -68,7 +68,9 @@
 
 ### Fase 6 — Deploy
 - [x] F1. Commit + push `main` (Vercel auto-deploy)
-- [ ] F2. Verifikasi 200 di URL produksi
+- [x] F2. Produksi 200: `https://portofolio.danur.web.id/` — aset & konten baru terverifikasi
+      (ilustrasi, tombol CV, WhatsApp, panel education, favicon/og-image)
+- [x] F3. Verifikasi ulang setelah push berikutnya (auto-deploy)
 
 ---
 
