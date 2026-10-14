@@ -1,512 +1,82 @@
-<!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<!doctype html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danu Ranggana · Portfolio</title>
-  <meta name="description" content="Fresh graduate Teknik Informatika. Web development (PHP, Laravel, JavaScript, MySQL), magang BPS, dan AI agent.">
-  <meta property="og:title" content="Danu Ranggana · Portfolio">
-  <meta property="og:description" content="Fresh graduate Teknik Informatika. Web development & AI agent.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="og-image.jpg">
-  <link rel="icon" type="image/jpeg" href="favicon.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
-              400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
-              800: '#1e40af', 900: '#1e3a8a',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Danu Ranggana · Web Developer</title>
+  <meta name="description" content="Fresh graduate S1 Teknik Informatika dengan IPK 3,53 (Dengan Pujian). Web development (PHP, Laravel, JavaScript) dan database (MySQL, PostgreSQL). Magang pengolahan data & IT support di BPS Pemalang." />
+  <meta name="author" content="Danu Ranggana" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="Danu Ranggana" />
+  <meta property="og:title" content="Danu Ranggana · Web Developer" />
+  <meta property="og:description" content="Fresh graduate S1 Teknik Informatika. Web development (PHP, Laravel, JavaScript) dan AI agent." />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Danu Ranggana — Web Developer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#06121a" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
-<div id="scroll-progress" class="fixed top-0 left-0 w-full h-1 z-[100] bg-brand-500 origin-left scale-x-0"></div>
-<body class="bg-slate-50 dark:bg-slate-950">
-  <div id="root" class="min-h-screen transition-colors duration-300">
-    
-    <!-- Mobile Header -->
-    <header class="lg:hidden fixed top-0 w-full z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex items-center justify-between">
-      <a href="#home" id="mobile-logo" class="font-jakarta font-bold text-xl tracking-tight">Danu <span class="text-brand-600">R.</span></a>
-      <button id="mobile-menu-btn" class="p-2 text-2xl hover:scale-110 transition-transform active:scale-95 min-w-[44px] min-h-[44px] flex items-center justify-center">
-        <iconify-icon icon="lucide:menu"></iconify-icon>
-      </button>
+<body>
+  <nav class="nav" aria-label="Navigasi utama">
+    <span class="seal" aria-hidden="true">丹 · 云</span>
+    <div class="nav-links" id="nav-links"><a class="active" href="#home">Home</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+    <div class="nav-tools"><button class="theme" type="button" aria-label="Ganti tampilan" title="Ganti tampilan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18V3Z"/><circle cx="12" cy="12" r="9"/></svg></button><button class="menu" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-links"><span></span></button></div>
+  </nav>
+
+  <main>
+    <header class="cv-head">
+      <h1>Danu Ranggana</h1>
+      <p class="cv-tagline">Web Developer · Fresh Graduate S1 Teknik Informatika</p>
+      <p class="cv-contact">danuranggana9@gmail.com · +62 895-0192-7317 · linkedin.com/in/danuranggana · github.com/DanU-R · Pemalang, Jawa Tengah</p>
     </header>
+    <section class="hero" id="home">
+      <div class="hero-art" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
+      <svg class="dragon-energy" viewBox="0 0 1440 790" preserveAspectRatio="none" aria-hidden="true"><path d="M488 152 C650 44 931 36 1168 116 S1380 214 1415 78"/><path d="M521 187 C710 89 968 102 1168 189 S1336 286 1432 233"/></svg>
+      <div class="data-stream" aria-hidden="true"><span>01001101 01110101 01110011 01100101 00100000 01000011 01101111 01100100 01100101</span><span>云 阙 10110 BUILD 01101 DEPLOY 11010</span></div>
+      <div class="code-hud" aria-hidden="true"><div class="command">$ git commit -m "udah fix kok"</div><div class="result">&gt; 1 file changed, 47 bugs created</div></div>
+      <figure class="coder-scene" role="img" aria-label="Ilustrasi seorang developer tampak dari belakang, duduk di atas genteng atap Chinese sambil menghadap laptop holografik berisi kode">
+        <span class="coder-glow" aria-hidden="true"></span><span class="holo-link" aria-hidden="true"></span>
+        <img class="coder-illustration" src="assets/coder-figure.webp" alt="" width="800" height="1200" decoding="async" />
+        <figcaption class="coder-caption"><b>The Architect</b>Menulis dunia dengan kode</figcaption>
+      </figure>
+      <i class="cloud c1" aria-hidden="true"></i><i class="cloud c2" aria-hidden="true"></i><i class="cloud c3" aria-hidden="true"></i><span class="circuit-orb" aria-hidden="true"></span>
+      <div class="wrap hero-inner"><div class="hero-copy">
+        <div class="eyebrow">Web Developer · Digital Craftsman</div>
+        <h1>Merancang Dunia Digital <span>Code flows like water.</span></h1>
+        <p class="lede">Saya Danu Ranggana. Fresh graduate S1 Teknik Informatika, mengubah ide menjadi pengalaman web yang tajam, intuitif, dan siap berkembang dengan kode, kreativitas, serta AI.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Jelajahi Karya <span aria-hidden="true">↗</span></a><button class="btn cv" type="button" data-print>Download CV</button><a class="btn secondary" href="#contact">Hubungi Saya</a></div>
+        <div class="hero-note"><span>云</span><span>BUILD · LEARN · EVOLVE</span></div>
+      </div></div>
+    </section>
 
-    <!-- Sidebar (Desktop/Mobile overlay) -->
-    <aside id="sidebar" class="sidebar-fixed bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 p-8 flex flex-col z-[60] overflow-y-auto">
-      <div class="mb-8 flex justify-between items-center">
-        <div>
-          <h1 class="text-xl font-jakarta font-bold text-slate-900 dark:text-white">Danu Ranggana</h1>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Informatics Engineering Graduate</p>
-        </div>
-        <button id="close-sidebar" class="lg:hidden p-2 text-2xl active:scale-95 min-w-[44px] min-h-[44px]">
-          <iconify-icon icon="lucide:x"></iconify-icon>
-        </button>
+    <section class="content" id="projects"><div class="wrap">
+      <header class="section-head"><div><div class="section-label">Selected Work</div><h2>Project Pilihan</h2></div><p>Eksperimen dan solusi digital yang memadukan fondasi teknis, pemikiran produk, dan eksekusi visual.</p></header>
+      <div class="projects">
+        <article class="project school" tabindex="0"><span class="project-mark" aria-hidden="true">学</span><div class="project-top"><span class="badge featured-tag">Featured · Web App</span><button class="arrow detail-toggle" type="button" aria-expanded="false" aria-label="Lihat detail Website Profil Sekolah"><span aria-hidden="true">↗</span></button></div><div class="project-lines" aria-hidden="true"><i></i><i></i><i></i></div><div class="project-copy"><h3>Website Profil Sekolah</h3><p>Laravel · Tailwind CSS · MySQL</p></div><div class="project-detail"><p>Platform web profil sekolah: informasi sekolah ditampilkan secara digital dan terpusat — profil, struktur, kegiatan, dan kontak dalam satu halaman dengan pengelolaan konten berbasis Laravel.</p><div class="plinks"><a class="plink" href="https://github.com/DanU-R/Digitalisasi_Sistem_Informasi_Sekolah" target="_blank" rel="noopener">Repo ↗</a></div></div></article>
+        <article class="project invite" tabindex="0"><span class="project-mark" aria-hidden="true">礼</span><div class="project-top"><span class="badge">Web Experience</span><button class="arrow detail-toggle" type="button" aria-expanded="false" aria-label="Lihat detail Temanten Undangan Digital"><span aria-hidden="true">↗</span></button></div><div class="project-copy"><h3>Temanten — Undangan Digital</h3><p>Laravel 12 · Alpine.js · MySQL</p></div><div class="project-detail"><p>Platform undangan pernikahan digital: tema kustom, RSVP tamu, galeri foto, dan dashboard klien. Repositori privat.</p></div></article>
+        <article class="project readme" tabindex="0"><span class="project-mark" aria-hidden="true">智</span><div class="project-top"><span class="badge">Dev Tool</span><button class="arrow detail-toggle" type="button" aria-expanded="false" aria-label="Lihat detail Readmeify"><span aria-hidden="true">↗</span></button></div><div class="project-copy"><h3>Readmeify</h3><p>Laravel · Tailwind CSS · Vite</p></div><div class="project-detail"><p>Web tool untuk menyusun README proyek secara cepat, dengan antarmuka modern dan bundling Vite.</p><div class="plinks"><a class="plink" href="https://github.com/DanU-R/Readmeify" target="_blank" rel="noopener">Repo ↗</a></div></div></article>
+        <article class="project stock" tabindex="0"><span class="project-mark" aria-hidden="true">数</span><div class="project-top"><span class="badge">Data Tools</span><button class="arrow detail-toggle" type="button" aria-expanded="false" aria-label="Lihat detail Traffic Index"><span aria-hidden="true">↗</span></button></div><div class="project-copy"><h3>Traffic Index</h3><p>Python · Jupyter Notebook</p></div><div class="project-detail"><p>Analisis dan visualisasi data lalu lintas: pengolahan dataset mentah menjadi indeks kemacetan yang mudah dibaca.</p><div class="plinks"><a class="plink" href="https://github.com/DanU-R/traffic-index" target="_blank" rel="noopener">Repo ↗</a></div></div></article>
       </div>
 
-      <nav id="main-nav" class="flex-1 space-y-1.5">
-        <a href="#home" id="nav-home-link" class="nav-item flex items-center gap-3 px-4 py-3 text-brand-600 bg-brand-50 dark:bg-brand-900/20 dark:text-brand-400 rounded-xl font-medium transition-all duration-200 active-nav">
-          <iconify-icon icon="lucide:home"></iconify-icon> Home
-        </a>
-        <a href="#about" id="nav-about-link" class="nav-item flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-600 dark:hover:text-brand-400 rounded-xl transition-all duration-200">
-          <iconify-icon icon="lucide:user"></iconify-icon> About
-        </a>
-        <a href="#experience" id="nav-exp-link" class="nav-item flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-600 dark:hover:text-brand-400 rounded-xl transition-all duration-200">
-          <iconify-icon icon="lucide:briefcase"></iconify-icon> Experience
-        </a>
-        <a href="#projects" id="nav-projects-link" class="nav-item flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-600 dark:hover:text-brand-400 rounded-xl transition-all duration-200">
-          <iconify-icon icon="lucide:layout-grid"></iconify-icon> Projects
-        </a>
-        <a href="#skills" id="nav-skills-link" class="nav-item flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-600 dark:hover:text-brand-400 rounded-xl transition-all duration-200">
-          <iconify-icon icon="lucide:code-2"></iconify-icon> Skills
-        </a>
-        <a href="#education" id="nav-edu-link" class="nav-item flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-600 dark:hover:text-brand-400 rounded-xl transition-all duration-200">
-          <iconify-icon icon="lucide:graduation-cap"></iconify-icon> Education
-        </a>
-        <a href="#contact" id="nav-contact-link" class="nav-item flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brand-600 dark:hover:text-brand-400 rounded-xl transition-all duration-200">
-          <iconify-icon icon="lucide:mail"></iconify-icon> Contact
-        </a>
-      </nav>
-
-      <div class="mt-8 space-y-6 pt-6 border-t border-slate-200 dark:border-slate-800">
-        <div class="flex items-center justify-between">
-          <div class="flex gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
-            <button onclick="setTheme('light')" id="theme-light-btn" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"><iconify-icon icon="lucide:sun"></iconify-icon></button>
-            <button onclick="setTheme('dark')" id="theme-dark-btn" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"><iconify-icon icon="lucide:moon"></iconify-icon></button>
-            <button onclick="setTheme('system')" id="theme-sys-btn" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"><iconify-icon icon="lucide:monitor"></iconify-icon></button>
-          </div>
-          <div class="flex gap-4 text-slate-400">
-            <a href="https://github.com/DanU-R" target="_blank" rel="noopener" id="sidebar-github-link" class="min-w-[44px] min-h-[44px] flex items-center justify-center"><iconify-icon icon="lucide:github" class="text-xl hover:text-slate-900 dark:hover:text-white transition-colors duration-200"></iconify-icon></a>
-            <a href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener" id="sidebar-linkedin-link" class="min-w-[44px] min-h-[44px] flex items-center justify-center"><iconify-icon icon="lucide:linkedin" class="text-xl hover:text-brand-600 transition-colors duration-200"></iconify-icon></a>
-          </div>
-        </div>
-
-        <div class="text-[10px] text-slate-400 leading-tight uppercase tracking-widest">
-          &copy; <span id="year">2025</span> Danu Ranggana<br>Built with passion
-        </div>
+      <div class="story">
+        <article class="panel about" id="about"><div class="section-label">Tentang</div><h2>Logika yang rapi.<br>Imajinasi tanpa batas.</h2><p>Fresh graduate S1 Teknik Informatika dengan IPK 3,53 (Dengan Pujian). Fondasi kuat di pengembangan web (PHP, Laravel, JavaScript) dan pengelolaan database (MySQL, PostgreSQL). Berpengalaman magang di Badan Pusat Statistik (BPS) dalam pengolahan data &amp; IT support. Teliti dan cepat belajar. Saat ini juga mendalami AI agent (Hermes) secara mandiri.</p><span class="status">Open to Opportunity</span></article>
+        <article class="panel experience" id="experience"><div class="section-label">Perjalanan</div><h3>Pengalaman</h3><div class="timeline" aria-label="Linimasa pengalaman"><div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><strong>Magang — Pengolahan Data &amp; IT Support</strong><strong class="place">Badan Pusat Statistik (BPS) Kabupaten Pemalang</strong><div class="date">Maret – Juni 2024</div><ul><li>Menjaga operasional aplikasi internal (monitoring &amp; maintenance).</li><li>Troubleshooting dan testing aplikasi internal.</li><li>Verifikasi dan validasi data.</li><li>Menyusun dokumentasi teknis.</li><li>Berkoordinasi dengan tim dalam menyelesaikan tugas.</li></ul></div></div></article>
       </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content min-h-screen">
-      
-      <!-- Hero Section -->
-      <section id="home" class="relative min-h-[700px] flex items-center pt-24 lg:pt-0 overflow-hidden">
-        <div class="hero-bg absolute inset-0 z-0"></div>
-        <div class="relative z-10 w-full px-6 lg:px-12 py-12">
-          <div class="max-w-4xl">
-            <span class="hero-badge reveal active inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 text-green-400 text-xs font-semibold rounded-full border border-green-500/20 mb-6">
-              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              Open to work · Web Development & IT
-            </span>
-            <h2 class="text-5xl lg:text-7xl font-jakarta font-extrabold text-white mb-4 word-reveal">
-              <span style="animation-delay: 100ms">Danu</span> 
-              <span style="animation-delay: 200ms">Ranggana</span>
-            </h2>
-            <p class="reveal active delay-300 text-xl lg:text-2xl text-slate-200 font-jakarta font-medium mb-6">
-              Fresh graduate Teknik Informatika yang membangun web, mengelola data, dan sedang mendalami AI agent.
-            </p>
-            <p class="reveal active delay-400 text-lg text-slate-300 max-w-2xl mb-10 leading-relaxed">
-              Berlokasi di Pemalang, Jawa Tengah. Fokus pada pengembangan digital yang efisien dan solutif.
-            </p>
-            
-            <!-- Print-only contact bar (hidden on screen, visible in print CV) -->
-            <div class="print-contact">
-              danuranggana9@gmail.com · +62 895-0192-7317 · linkedin.com/in/danuranggana · github.com/DanU-R
-            </div>
-
-            <div class="hero-cta reveal active delay-500 flex flex-wrap gap-4 mb-16">
-              <a href="#projects" id="hero-projects-btn" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-2xl flex items-center gap-2 transition-all duration-250 transform hover:scale-[1.05] hover:-translate-y-1 shadow-xl shadow-brand-600/20 active:scale-95 min-h-[48px]">
-                Lihat Proyek <iconify-icon icon="lucide:arrow-right"></iconify-icon>
-              </a>
-              <button onclick="window.print()" id="hero-cv-btn" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-2xl border border-white/20 backdrop-blur-md flex items-center gap-2 transition-all duration-250 transform hover:scale-[1.05] hover:-translate-y-1 active:scale-95 min-h-[48px]">
-                <iconify-icon icon="lucide:download"></iconify-icon> Download CV
-              </button>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div class="reveal-scale active delay-500 glass-card p-6 rounded-3xl flex items-center gap-4 hover:bg-white/20 dark:hover:bg-slate-700/80 transition-colors cursor-default">
-                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl">
-                  <iconify-icon icon="lucide:award"></iconify-icon>
-                </div>
-                <div>
-                  <div class="text-2xl font-jakarta font-bold text-white" data-count="3.53" data-decimals="2">0.00</div>
-                  <div class="text-sm text-slate-400">IPK</div>
-                </div>
-              </div>
-              <div class="reveal-scale active delay-500 glass-card p-6 rounded-3xl flex items-center gap-4 hover:bg-white/20 dark:hover:bg-slate-700/80 transition-colors cursor-default">
-                <div class="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl">
-                  <iconify-icon icon="lucide:graduation-cap"></iconify-icon>
-                </div>
-                <div>
-                  <div class="text-2xl font-jakarta font-bold text-white" data-count="2025" data-decimals="0">0</div>
-                  <div class="text-sm text-slate-400">Tahun Lulus</div>
-                </div>
-              </div>
-              <div class="reveal-scale active delay-500 glass-card p-6 rounded-3xl flex items-center gap-4 hover:bg-white/20 dark:hover:bg-slate-700/80 transition-colors cursor-default">
-                <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-2xl">
-                  <iconify-icon icon="lucide:briefcase"></iconify-icon>
-                </div>
-                <div>
-                  <div class="text-lg font-jakarta font-bold text-white uppercase tracking-tight">BPS Intern</div>
-                  <div class="text-sm text-slate-400">IT Support</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="py-24 px-6 lg:px-12">
-        <div class="max-w-6xl mx-auto">
-          <div class="flex flex-col lg:flex-row gap-16">
-            <div class="flex-1 reveal">
-              <div class="flex items-center gap-2 text-brand-600 font-semibold mb-4">
-                <span class="uppercase tracking-widest text-xs tracking-tighter">Tentang</span>
-              </div>
-              <h2 class="text-4xl font-jakarta font-extrabold mb-8">Profil Profesional</h2>
-              <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                <p>
-                  Fresh graduate S1 Teknik Informatika dengan IPK <strong>3,53 (Dengan Pujian)</strong>. Memiliki fondasi kuat di pengembangan web dan pengelolaan database.
-                </p>
-                <p>
-                  Selama empat semester terakhir, fokus saya jatuh pada <strong>PHP, Laravel, dan JavaScript</strong> di sisi server, serta <strong>MySQL dan PostgreSQL</strong> untuk data. Saya terbiasa menyelesaikan masalah dari sisi yang paling dekat dengan akar masalahnya, bukan sekadar menutup gejalanya.
-                </p>
-                <p>
-                  Pengalaman magang di Badan Pusat Statistik melatih hal yang tak diajarkan kuliah: bekerja dengan data nyata, deadline nyata, dan orang nyata. Saat ini saya juga sedang mendalami <strong>AI agent (Hermes)</strong> secara mandiri.
-                </p>
-              </div>
-              
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                <div class="reveal-scale p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl">
-                  <h3 class="font-bold mb-2">Dengan Pujian</h3>
-                  <p class="text-sm text-slate-500">IPK 3,53 dari Institut Widya Pratama Pekalongan, terbaik di angkatan.</p>
-                </div>
-                <div class="reveal-scale delay-100 p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl">
-                  <h3 class="font-bold mb-2">4 bulan di BPS</h3>
-                  <p class="text-sm text-slate-500">Magang pengolahan data & IT support: monitoring, troubleshooting, validasi.</p>
-                </div>
-                <div class="reveal-scale delay-200 p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl">
-                  <h3 class="font-bold mb-2">AI & Automation</h3>
-                  <p class="text-sm text-slate-500">Membangun dan mengoperasikan AI agent (Hermes) untuk otomasi kerja harian.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-full lg:w-[400px] reveal-scale">
-              <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div class="aspect-square rounded-2xl overflow-hidden mb-8 bg-slate-100 dark:bg-slate-800 group">
-                  <img src="avatar.jpg" alt="Danu Ranggana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <ul class="space-y-4 text-sm">
-                  <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-                    <span class="text-slate-500">Nama</span>
-                    <span class="font-semibold">Danu Ranggana</span>
-                  </li>
-                  <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-                    <span class="text-slate-500">Pendidikan</span>
-                    <span class="font-semibold text-right">S1 Teknik Informatika</span>
-                  </li>
-                  <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-                    <span class="text-slate-500">Universitas</span>
-                    <span class="font-semibold text-right">Institut Widya Pratama</span>
-                  </li>
-                  <li class="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-                    <span class="text-slate-500">Kelulusan</span>
-                    <span class="font-semibold">2025</span>
-                  </li>
-                  <li class="flex justify-between">
-                    <span class="text-slate-500">IPK</span>
-                    <span class="font-semibold text-brand-600">3.53 / 4.00</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="py-24 px-6 lg:px-12 bg-white dark:bg-slate-900/50">
-        <div class="max-w-6xl mx-auto">
-          <div class="flex items-center gap-2 text-brand-600 font-semibold mb-4 reveal">
-            <span class="uppercase tracking-widest text-xs">Pengalaman</span>
-          </div>
-          <h2 class="text-4xl font-jakarta font-extrabold mb-16 reveal">Rekam Jejak Magang</h2>
-          
-          <div class="space-y-0">
-            <!-- BPS Pemalang -->
-            <div class="timeline-item relative pl-12 reveal">
-              <div class="timeline-dot timeline-dot-reveal absolute left-0 top-0 w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center text-white z-10 ring-4 ring-brand-100 dark:ring-brand-900/30" style="animation-delay: 100ms">
-                <iconify-icon icon="lucide:briefcase"></iconify-icon>
-              </div>
-              <div>
-                <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4">
-                  <h3 class="text-2xl font-bold">Badan Pusat Statistik (BPS) Kabupaten Pemalang</h3>
-                  <span class="w-fit px-3 py-1 bg-brand-50 dark:bg-brand-900/20 text-brand-600 dark:text-brand-400 text-[10px] font-bold uppercase rounded-full">Maret – Juni 2024</span>
-                </div>
-                <p class="text-lg font-medium text-slate-800 dark:text-slate-200 mb-4">Magang, Pengolahan Data & IT Support</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                  <ul class="space-y-2 text-slate-600 dark:text-slate-400">
-                    <li class="flex items-center gap-2"><iconify-icon icon="lucide:check-circle-2" class="text-brand-500"></iconify-icon> Monitoring & maintenance aplikasi internal</li>
-                    <li class="flex items-center gap-2"><iconify-icon icon="lucide:check-circle-2" class="text-brand-500"></iconify-icon> Troubleshooting dan testing sistem</li>
-                    <li class="flex items-center gap-2"><iconify-icon icon="lucide:check-circle-2" class="text-brand-500"></iconify-icon> Verifikasi dan validasi data statistik</li>
-                  </ul>
-                  <ul class="space-y-2 text-slate-600 dark:text-slate-400">
-                    <li class="flex items-center gap-2"><iconify-icon icon="lucide:check-circle-2" class="text-brand-500"></iconify-icon> Menyusun dokumentasi teknis</li>
-                    <li class="flex items-center gap-2"><iconify-icon icon="lucide:check-circle-2" class="text-brand-500"></iconify-icon> Koordinasi tim penyelesaian tugas</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="py-24 px-6 lg:px-12">
-        <div class="max-w-6xl mx-auto">
-          <div class="reveal mb-12">
-            <div class="flex items-center gap-2 text-brand-600 font-semibold mb-4">
-              <span class="uppercase tracking-widest text-xs">Karya</span>
-            </div>
-            <h2 class="text-4xl font-jakarta font-extrabold">Featured Projects</h2>
-            <p class="mt-4 text-slate-500">Dua proyek utama: dua web platform Laravel. Kode sumber terbuka.</p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <!-- Project 1 -->
-            <div class="reveal-scale tilt-card group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-brand-600/10 hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <div class="aspect-video bg-slate-200 dark:bg-slate-800 overflow-hidden relative">
-                <img src="sekolah-preview.png" alt="Digitalisasi Sistem Informasi Sekolah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-4 right-4">
-                  <span class="px-3 py-1 bg-white/90 dark:bg-slate-900/90 backdrop-blur rounded-lg text-[10px] font-bold uppercase tracking-wider">Laravel</span>
-                </div>
-              </div>
-              <div class="p-8 flex-1 flex flex-col">
-                <h3 class="text-2xl font-bold mb-3 group-hover:text-brand-600 transition-colors">Digitalisasi Sistem Informasi Sekolah</h3>
-                <p class="text-slate-600 dark:text-slate-400 mb-6 flex-1">Platform web profil sekolah. Informasi sekolah ditampilkan secara digital dan terpusat: profil, struktur, kegiatan, dan kontak dalam satu halaman.</p>
-                <div class="pt-6 border-t border-slate-100 dark:border-slate-800">
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-2 py-1 bg-slate-50 dark:bg-slate-800 text-[10px] text-slate-500 rounded font-bold border border-slate-100 dark:border-slate-700">LARAVEL</span>
-                    <span class="px-2 py-1 bg-slate-50 dark:bg-slate-800 text-[10px] text-slate-500 rounded font-bold border border-slate-100 dark:border-slate-700">TAILWIND CSS</span>
-                    <span class="px-2 py-1 bg-slate-50 dark:bg-slate-800 text-[10px] text-slate-500 rounded font-bold border border-slate-100 dark:border-slate-700">MYSQL</span>
-                  </div>
-                  <a href="https://github.com/DanU-R/company-profile" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm font-bold text-brand-600 hover:gap-3 transition-all duration-200">
-                    Lihat Repository <iconify-icon icon="lucide:github"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="reveal-scale delay-100 tilt-card group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-brand-600/10 hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <div class="aspect-video bg-slate-200 dark:bg-slate-800 overflow-hidden relative">
-                <img src="temanten-preview.png" alt="Temanten — Undangan Pernikahan Digital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-4 right-4">
-                  <span class="px-3 py-1 bg-white/90 dark:bg-slate-900/90 backdrop-blur rounded-lg text-[10px] font-bold uppercase tracking-wider">Laravel 12</span>
-                </div>
-              </div>
-              <div class="p-8 flex-1 flex flex-col">
-                <h3 class="text-2xl font-bold mb-3 group-hover:text-brand-600 transition-colors">Temanten — Undangan Pernikahan Digital</h3>
-                <p class="text-slate-600 dark:text-slate-400 mb-6 flex-1">Platform undangan digital dengan 16 tema kustom, RSVP tamu, galeri foto, QRIS, dashboard klien & admin. Full-stack Laravel siap pakai.</p>
-                <div class="pt-6 border-t border-slate-100 dark:border-slate-800">
-                  <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-2 py-1 bg-slate-50 dark:bg-slate-800 text-[10px] text-slate-500 rounded font-bold border border-slate-100 dark:border-slate-700">LARAVEL 12</span>
-                    <span class="px-2 py-1 bg-slate-50 dark:bg-slate-800 text-[10px] text-slate-500 rounded font-bold border border-slate-100 dark:border-slate-700">ALPINE.JS</span>
-                    <span class="px-2 py-1 bg-slate-50 dark:bg-slate-800 text-[10px] text-slate-500 rounded font-bold border border-slate-100 dark:border-slate-700">MYSQL</span>
-                  </div>
-                  <a href="https://github.com/Temantenn/temanten" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm font-bold text-brand-600 hover:gap-3 transition-all duration-200">
-                    Lihat Repository <iconify-icon icon="lucide:github"></iconify-icon>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="skills" class="py-24 px-6 lg:px-12 bg-slate-100 dark:bg-slate-900/30">
-        <div class="max-w-6xl mx-auto">
-          <div class="flex items-center gap-2 text-brand-600 font-semibold mb-4 reveal">
-            <span class="uppercase tracking-widest text-xs">Skills</span>
-          </div>
-          <h2 class="text-4xl font-jakarta font-extrabold mb-12 reveal">Technical Mastery</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Backend -->
-            <div class="reveal-scale p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-brand-600/5 transition-all group flex items-start gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                <iconify-icon icon="lucide:server"></iconify-icon>
-              </div>
-              <div>
-                <h3 class="font-bold mb-3">Backend</h3>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PHP</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Laravel</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">REST API</span>
-                </div>
-              </div>
-            </div>
-            <!-- Frontend -->
-            <div class="reveal-scale delay-100 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-emerald-600/5 transition-all group flex items-start gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                <iconify-icon icon="lucide:monitor"></iconify-icon>
-              </div>
-              <div>
-                <h3 class="font-bold mb-3">Frontend</h3>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">JavaScript</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">HTML/CSS</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Bootstrap</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Tailwind</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Database -->
-            <div class="reveal-scale delay-200 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-amber-600/5 transition-all group flex items-start gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-2xl bg-amber-50 dark:bg-amber-900/20 text-amber-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                <iconify-icon icon="lucide:database"></iconify-icon>
-              </div>
-              <div>
-                <h3 class="font-bold mb-3">Database</h3>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">MySQL</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">PostgreSQL</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tools -->
-            <div class="reveal-scale delay-300 p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-purple-600/5 transition-all group flex items-start gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-purple-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                <iconify-icon icon="lucide:tool"></iconify-icon>
-              </div>
-              <div>
-                <h3 class="font-bold mb-3">Tools</h3>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Git</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Excel</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">VS Code</span>
-                  <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-medium hover:text-brand-600 transition-all cursor-default">Linux</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section id="education" class="py-24 px-6 lg:px-12">
-        <div class="max-w-6xl mx-auto">
-          <div class="flex items-center gap-2 text-brand-600 font-semibold mb-4 reveal">
-            <span class="uppercase tracking-widest text-xs">Pendidikan</span>
-          </div>
-          <h2 class="text-4xl font-jakarta font-extrabold mb-12 reveal">Latar Belakang Akademik</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- S1 -->
-            <div class="reveal-scale p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all">
-              <span class="inline-block text-[10px] font-bold text-brand-600 mb-2 uppercase tracking-widest">2021 – 2025</span>
-              <h3 class="text-xl font-bold mb-1">S1 Teknik Informatika</h3>
-              <p class="text-slate-500 mb-4">Institut Widya Pratama Pekalongan</p>
-              <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">IPK 3,53 (Dengan Pujian)</p>
-            </div>
-            <!-- SMK -->
-            <div class="reveal-scale delay-100 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all">
-              <span class="inline-block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">2019 – 2021</span>
-              <h3 class="text-xl font-bold mb-1">SMK TKJ</h3>
-              <p class="text-slate-500 mb-4">SMK Texmaco Pemalang</p>
-              <p class="text-sm text-slate-600 dark:text-slate-400">Teknik Komputer & Jaringan</p>
-            </div>
-            <!-- Certs -->
-            <div class="reveal-scale delay-200 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all border-t-brand-500 border-t-4">
-              <span class="inline-block text-[10px] font-bold text-brand-600 mb-2 uppercase tracking-widest">KUALIFIKASI</span>
-              <h3 class="text-xl font-bold mb-4">Sertifikasi Profesi</h3>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-sm font-semibold">
-                  <iconify-icon icon="lucide:check-circle" class="text-brand-500"></iconify-icon>
-                  CCNAv7
-                </div>
-                <div class="flex items-center gap-2 text-sm font-semibold">
-                  <iconify-icon icon="lucide:check-circle" class="text-brand-500"></iconify-icon>
-                  BNSP TKJ
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="py-24 px-6 lg:px-12">
-        <div class="max-w-6xl mx-auto reveal">
-          <div class="bg-slate-900 dark:bg-brand-600 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden">
-             <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
-             <div class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl -ml-32 -mb-32"></div>
-             
-             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
-               <div>
-                 <h2 class="text-4xl lg:text-5xl font-jakarta font-extrabold text-white mb-6 reveal delay-100">Mari berdiskusi</h2>
-                 <p class="text-slate-300 mb-10 text-lg max-w-2xl reveal delay-200">Terbuka untuk pekerjaan, magang, maupun kolaborasi di bidang IT / web development. Biasanya membalas di hari yang sama.</p>
-                 <div class="flex flex-col gap-4 text-white">
-                   <a href="mailto:danuranggana9@gmail.com" class="flex items-center gap-4 group">
-                     <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-xl group-hover:bg-brand-500 transition-colors"><iconify-icon icon="lucide:mail"></iconify-icon></div>
-                     <div>
-                       <p class="text-xs text-slate-400 uppercase tracking-widest">Email</p>
-                       <p class="font-medium">danuranggana9@gmail.com</p>
-                     </div>
-                   </a>
-                   <a href="tel:+6289501927317" class="flex items-center gap-4 group">
-                     <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-xl group-hover:bg-brand-500 transition-colors"><iconify-icon icon="lucide:phone"></iconify-icon></div>
-                     <div>
-                       <p class="text-xs text-slate-400 uppercase tracking-widest">Telepon / WA</p>
-                       <p class="font-medium">+62 895-0192-7317</p>
-                     </div>
-                   </a>
-                   <div class="flex items-center gap-4 group">
-                     <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-xl"><iconify-icon icon="lucide:map-pin"></iconify-icon></div>
-                     <div>
-                       <p class="text-xs text-slate-400 uppercase tracking-widest">Lokasi</p>
-                       <p class="font-medium">Pemalang, Jawa Tengah</p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               <div class="flex flex-col justify-center gap-4">
-                 <a href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener" class="px-8 py-5 bg-white text-slate-900 font-bold rounded-2xl hover:bg-slate-100 hover:scale-[1.02] transition-all flex items-center justify-between group">
-                   <span class="flex items-center gap-3"><iconify-icon icon="lucide:linkedin"></iconify-icon> LinkedIn</span>
-                   <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-                 </a>
-                 <a href="https://github.com/DanU-R" target="_blank" rel="noopener" class="px-8 py-5 bg-white/10 border border-white/20 text-white font-bold rounded-2xl hover:bg-white/20 hover:scale-[1.02] transition-all flex items-center justify-between group">
-                   <span class="flex items-center gap-3"><iconify-icon icon="lucide:github"></iconify-icon> GitHub</span>
-                   <iconify-icon icon="lucide:arrow-right" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-                 </a>
-               </div>
-             </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-  </div>
-
+      <div class="lower">
+        <article class="panel" id="skills"><div class="section-label">Arsenal</div><h3>Teknologi</h3><div class="skill-groups"><section class="skill-group" aria-labelledby="skill-frontend"><h4 id="skill-frontend">Frontend</h4><div class="skills"><span class="skill"><b>JS</b>JavaScript</span><span class="skill"><b>&lt;/&gt;</b>HTML/CSS</span><span class="skill"><b>N</b>Next.js</span><span class="skill"><b>〰</b>Tailwind</span><span class="skill"><b>B</b>Bootstrap</span></div></section><section class="skill-group" aria-labelledby="skill-backend"><h4 id="skill-backend">Backend &amp; Data</h4><div class="skills"><span class="skill"><b>php</b>PHP</span><span class="skill"><b>◈</b>Laravel</span><span class="skill"><b>API</b>REST API</span><span class="skill"><b>⌁</b>MySQL</span><span class="skill"><b>PG</b>PostgreSQL</span><span class="skill"><b>Py</b>Python</span></div></section><section class="skill-group" aria-labelledby="skill-tools"><h4 id="skill-tools">Workflow</h4><div class="skills"><span class="skill"><b>◆</b>Git</span><span class="skill"><b>X</b>Excel</span><span class="skill"><b>VS</b>VS Code</span><span class="skill"><b>&gt;_</b>Linux</span></div></section></div></article>
+        <article class="panel contact" id="contact"><div class="section-label">Contact</div><h3>Mari Terhubung</h3><p>Terbuka untuk pekerjaan, magang, maupun kolaborasi di bidang IT / web development. Biasanya membalas di hari yang sama.</p><div class="contact-links" aria-label="Kanal kontak"><a class="contact-link" href="mailto:danuranggana9@gmail.com" title="danuranggana9@gmail.com" aria-label="Kirim email ke danuranggana9@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 7 9-7"/></svg></a><a class="contact-link" href="https://linkedin.com/in/danuranggana" target="_blank" rel="noopener" title="linkedin.com/in/danuranggana" aria-label="LinkedIn Danu Ranggana"><b>in</b></a><a class="contact-link" href="https://github.com/DanU-R" target="_blank" rel="noopener" title="github.com/DanU-R" aria-label="GitHub DanU-R"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.9c0-1 .1-1.4-.5-2 2.8-.3 5.7-1.4 5.7-6.2 0-1.4-.5-2.5-1.3-3.4.1-.3.6-1.6-.1-3.4 0 0-1.1-.3-3.6 1.3a12.4 12.4 0 0 0-6.5 0C6.2 1.7 5.1 2 5.1 2c-.7 1.8-.2 3.1-.1 3.4A5 5 0 0 0 3.7 9c0 4.8 2.9 5.9 5.7 6.2-.4.4-.7 1-.7 1.9V21"/></svg></a><a class="contact-link" href="https://wa.me/6289501927317" target="_blank" rel="noopener" title="WhatsApp +62 895-0192-7317" aria-label="WhatsApp +62 895-0192-7317"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M8.6 8.9c0 3 2.5 5.5 5.5 5.5l1.1-1.4-1.9-.7-.8.9c-.9-.4-1.6-1.1-2-2l.9-.8-.7-1.9-1.4 1.1"/></svg></a><a class="contact-link" href="tel:+6289501927317" title="+62 895-0192-7317" aria-label="Telepon +62 895-0192-7317"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg></a></div><p class="contact-note">Pemalang, Jawa Tengah · <a href="mailto:danuranggana9@gmail.com">danuranggana9@gmail.com</a> · <a href="tel:+6289501927317">+62 895-0192-7317</a></p></article>
+        <article class="panel education" id="education"><div class="section-label">Pendidikan</div><h3>Latar Belakang Akademik</h3><div class="timeline" aria-label="Riwayat pendidikan dan sertifikasi"><div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><strong>S1 Teknik Informatika</strong><strong class="place">Institut Widya Pratama Pekalongan</strong><div class="date">2021 – 2025</div><p>IPK 3,53 (Dengan Pujian).</p></div><div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><strong>SMK TKJ — Teknik Komputer &amp; Jaringan</strong><strong class="place">SMK Texmaco Pemalang</strong><div class="date">2019 – 2021</div></div><div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><strong>Sertifikasi Profesi</strong><strong class="place">CCNAv7 · BNSP TKJ</strong></div></div></article>
+      </div>
+      <footer class="footer"><span>© 2026 Danu Ranggana</span><span><em>构建</em> · Learn · Improve · Repeat</span></footer>
+    </div></section>
+  </main>
 </body>
 </html>

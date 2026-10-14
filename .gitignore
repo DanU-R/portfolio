@@ -1,0 +1,6 @@
+# Tooling artifacts — not part of the published site
+.superdesign/
+
+# Scratch/verification leftovers
+.shots/
+.probe.*

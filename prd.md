@@ -64,8 +64,9 @@ Semua konten di bawah = spec data yang HARUS muncul di site. Ubah di sini → ub
 
 ### 5.1 Hero
 - Nama: **Danu Ranggana**
-- Tagline: `Fresh Graduate Informatics | AI-Powered Problem Solver | Tech Enthusiast`
-- CTA 1: **Download CV** → trigger `window.print()`; print stylesheet me-render ulang halaman jadi layout CV rapi (header profil + kontak, About, Education, Experience, Projects, Skills). User save as PDF dari dialog print browser. **Tanpa file PDF statis** — CV = website yang di-print. (Keputusan user 2026-08-22.)
+- Headline hero: `Merancang Dunia Digital` + `Code flows like water.`
+- Eyebrow: `Web Developer · Digital Craftsman`
+- CTA 1: **Download CV** (`.btn.cv`, `data-print`) → trigger `window.print()`; print stylesheet me-render ulang halaman jadi layout CV rapi (header profil + kontak, About, Education, Experience, Projects, Skills). User save as PDF dari dialog print browser. **Tanpa file PDF statis** — CV = website yang di-print. (Keputusan user 2026-08-22.) Tombol = `<button>`, bukan `<a>`: `script.js` memakai `.actions a[href^="#"]` untuk smooth scroll sehingga trigger non-anchor tidak boleh berupa link.
 - CTA 2: **Hubungi Saya** → anchor ke `#contact`
 - (Opsional) Sub-text singkat 1 kalimat: fresh grad S1 TI, IPK 3,53 (Dengan Pujian), fokus web dev & AI agent.
 
@@ -86,24 +87,25 @@ Satu kartu:
   5. Berkoordinasi dengan tim dalam menyelesaikan tugas.
 
 ### 5.4 Projects
-Dua kartu, masing-masing: gambar/ikon + judul + deskripsi singkat + badge teknologi + tombol link ke GitHub.
+Empat kartu (urutan DOM menentukan layout grid — kartu pertama = featured, `grid-row:span 3` di desktop). Masing-masing: judul + deskripsi singkat + badge teknologi + link repo bila publik.
 
-| Proyek | Deskripsi | Badge | Link |
-|--------|-----------|-------|------|
-| **Digitalisasi Sistem Informasi Sekolah** | Platform web profil sekolah untuk menampilkan informasi sekolah secara digital dan terpusat. | `Laravel` `Tailwind CSS` `MySQL` | https://github.com/DanU-R/company-profile |
-| **Google Workspace AutoBot** | Toolkit otomasi Python untuk pengelolaan Google Workspace Admin. | `Python` `Selenium` | https://github.com/DanU-R/gsuite_workspace |
+| # | Proyek | Deskripsi | Badge | Link |
+|---|--------|-----------|-------|------|
+| 1 | **Website Profil Sekolah** | Platform web profil sekolah: informasi terpusat — profil, struktur, kegiatan, kontak — dengan pengelolaan konten berbasis Laravel. | `Laravel` `Tailwind CSS` `MySQL` | https://github.com/DanU-R/Digitalisasi_Sistem_Informasi_Sekolah |
+| 2 | **Temanten — Undangan Digital** | Platform undangan pernikahan digital: tema kustom, RSVP tamu, galeri foto, dashboard klien. | `Laravel 12` `Alpine.js` `MySQL` | — (repositori privat) |
+| 3 | **Readmeify** | Web tool menyusun README proyek dengan antarmuka modern dan bundling Vite. | `Laravel` `Tailwind CSS` `Vite` | https://github.com/DanU-R/Readmeify |
+| 4 | **Traffic Index** | Analisis & visualisasi data lalu lintas: dataset mentah → indeks kemacetan. | `Python` `Jupyter Notebook` | https://github.com/DanU-R/traffic-index |
 
-> **Note:** Ikon = inline SVG / emoji / placeholder. Gak perlu asset gambar eksternal (biar ringan & self-contained). Kalau mau gambar, pakai placeholder SVG 16:9.
+> **Note:** Ikon = glyph CJK inline (学/礼/智/数) + inline SVG. Tidak ada asset gambar eksternal. Stack & link diverifikasi lewat metadata repo (2026-10-14).
 
 ### 5.5 Skills
-Grid badge dikelompok per kategori:
+Grid chip dikelompok per kategori (3 grup, 15 item):
 
 | Kategori | Items |
 |----------|-------|
-| **Database** | MySQL, PostgreSQL |
-| **Backend** | PHP, Laravel, REST API |
-| **Frontend** | JavaScript, HTML, CSS, Bootstrap |
-| **Tools** | Git, Microsoft Excel, VS Code, Linux |
+| **Frontend** | JavaScript, HTML/CSS, Next.js, Tailwind, Bootstrap |
+| **Backend & Data** | PHP, Laravel, REST API, MySQL, PostgreSQL, Python |
+| **Workflow** | Git, Excel, VS Code, Linux |
 
 ### 5.6 Phone
 - Display: **+62 895-0192-7317**
@@ -111,9 +113,11 @@ Grid badge dikelompok per kategori:
 - (Opsional P2) WhatsApp: `https://wa.me/6289501927317`
 
 ### 5.7 Education & Certifications
+Section `#education` (panel `.education`, urutan ke-3 di `.lower`):
+
 | Type | Institusi / Sertifikasi | Periode |
 |------|------------------------|---------|
-| S1 | Teknik Informatika — Institut Widya Pratama Pekalongan | 2021 – 2025 |
+| S1 | Teknik Informatika — Institut Widya Pratama Pekalongan (IPK 3,53 · Dengan Pujian) | 2021 – 2025 |
 | SMK | TKJ — SMK Texmaco Pemalang | 2019 – 2021 |
 | Sertifikasi | CCNAv7, BNSP TKJ | — |
 
@@ -124,6 +128,8 @@ Grid badge dikelompok per kategori:
 | HP | +62 895-0192-7317 (`tel:+6289501927317`) |
 | LinkedIn | https://linkedin.com/in/danuranggana |
 | GitHub | https://github.com/DanU-R |
+| WhatsApp | https://wa.me/6289501927317 (P2-6, dipakai) |
+| Lokasi | Pemalang, Jawa Tengah (teks, bukan link) |
 
 ---
 
@@ -187,13 +193,19 @@ Grid badge dikelompok per kategori:
 ## 8. Proposed File Structure
 
 ```
-portfolio-danu-ranggana/
-├── index.html              # semua konten, semantic
+portfolio/
+├── index.html              # seluruh konten, semantic
 ├── styles.css              # styling, responsive + @media print (layout CV)
-├── script.js               # nav toggle, smooth scroll, reveal, print-CV handler
-├── favicon.svg             # P1
-├── og-image.jpg            # P1 (1200x630, buat OG share)
+├── script.js               # theme/nav toggle, smooth scroll, scrollspy, expand proyek, print-CV handler
+├── favicon.svg             # ikon SVG (palet brand)
+├── favicon-32.png          # fallback raster
+├── apple-touch-icon.png    # ikon iOS
+├── og-image.jpg            # OG share (1200×630)
+├── assets/
+│   ├── hero-bg.webp        # latar hero
+│   └── coder-figure.webp   # ilustrasi hero
 ├── prd.md                  # dokumen ini
+├── todo.md                 # task breakdown
 └── README.md               # cara run local + cara deploy Vercel
 ```
 
@@ -224,7 +236,7 @@ portfolio-danu-ranggana/
 | Console errors | 0 | DevTools console |
 | Responsive 360px | Layak pakai | Resize test / device toolbar |
 | Links | 100% valid | Klik semua: GitHub, LinkedIn, email, tel, project |
-| Download CV | Print dialog buka, hasil PDF rapi | `window.print()` → save PDF, inspeksi: 1–2 hal A4, layout CV, section urut benar |
+| Download CV | Print dialog buka, hasil PDF rapi | `window.print()` → save PDF, inspeksi: 1–2 hal A4 (terverifikasi 2), layout CV, urutan section benar |
 | Vercel live | 200 OK | Buka URL |
 | HTML valid | 0 error | validator.w3.org |
 
