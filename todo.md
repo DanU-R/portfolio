@@ -21,11 +21,11 @@
 - Font: `Outfit` + `Noto Sans SC` (aksen glyph CJK pada seal/nav/ilustrasi).
 
 ### A3. Ilustrasi hero
-- Berkas desain import **menyembunyikan** ilustrasinya di blok *"Clean single-subject coder layer"* (`.coder-scene{display:none}` + `.coder-scene:before{display:none}` + `.hero-roof-foreground{display:none}`).
-- Keputusan: tiga deklarasi itu dihapus, **seluruh geometri lain dipertahankan apa adanya** — box `300×225` (desktop) / `345×370` (`@900`) / `215×250` (`@640`), layer `.coder-glow` (96/55 + 70/104), `.holo-link` (183/126 + 342/290), `.coder-caption` (152/8 + 270/14), dan `object-position:center bottom` pada gambar.
-- `.hero-roof-foreground` tidak dihidupkan: elemennya memang tidak punya `background-image` di sumber (murni `display:none`), jadi tidak ada yang hilang.
-- CSS mati yang benar-benar tanpa konsumen dihapus: `.rooftop-perch`, `.dragon-aura*`, `.dragon-motion`, `.temple-motion`, figur coder gambar-CSS (`.coder-person` … `.code-line`), `@keyframes typeArm/blink/auraChase/auraPulse`.
-- Aset: `coder-figure.png` 1280×1920 (1956 KB) → `coder-figure.webp` 800×1200 (148 KB); `hero-bg.webp` 957 KB → 409 KB. Gabungan 2,9 MB → 557 KB.
+- Berkas desain import menyembunyikan ilustrasinya di blok *"Clean single-subject coder layer"* (`.coder-scene{display:none}` dll). Sempat dihidupkan, tapi hasilnya berupa figur kecil mengambang di hero.
+- **Keputusan akhir: ilustrasi `coder-figure` dihapus seluruhnya** (markup `<figure class="coder-scene">`, semua CSS `.coder-scene`/`.coder-glow`/`.holo-link`/`.coder-caption`/`.coder-illustration`, `@keyframes coderFloat/screenGlow/holoSignal/portraitPulse`, dan aset `assets/coder-figure.webp`).
+- Hero kini murni latar `hero-bg.webp` + grid + partikel (`.dragon-energy`, `.cloud`, `.circuit-orb`, `.data-stream`, `.code-hud`) — tanpa figur mengambang.
+- CSS mati lain yang dihapus: `.rooftop-perch`, `.dragon-aura*`, `.dragon-motion`, `.temple-motion`, `.hero-roof-foreground`, figur coder gambar-CSS (`.coder-person` … `.code-line`), `@keyframes typeArm/blink/auraChase/auraPulse`.
+- Aset: `hero-bg.webp` 957 KB → 409 KB. Sisa aset = 1 berkas (409 KB).
 
 ### A4. QA tooling
 - Headless Edge (`--print-to-pdf`, `--dump-dom`) untuk verifikasi layout print & DOM tanpa membuka browser manual.

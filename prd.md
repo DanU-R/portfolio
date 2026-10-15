@@ -202,8 +202,7 @@ portfolio/
 ├── apple-touch-icon.png    # ikon iOS
 ├── og-image.jpg            # OG share (1200×630)
 ├── assets/
-│   ├── hero-bg.webp        # latar hero
-│   └── coder-figure.webp   # ilustrasi hero
+│   └── hero-bg.webp        # latar hero
 ├── prd.md                  # dokumen ini
 ├── todo.md                 # task breakdown
 └── README.md               # cara run local + cara deploy Vercel
